@@ -20,7 +20,7 @@ class Pokemon():
 
     def __lt__(self, other):
 
-
+def new_obkect
 
 
 
