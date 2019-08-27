@@ -1,6 +1,6 @@
 class Pokemon():
-    def __init__(self, pokemon_dict):
-        clean_line = pokemon_dict.strip()
+    def __init__(self, pokemons):
+        clean_line = pokemons.strip()
         seperated = clean_line.split(",")
         self.name = seperated[0]
         self.type1 = seperated[1]
@@ -17,14 +17,19 @@ class Pokemon():
         self.legendary = seperated[12]
 
     def __str__(self):
-        return "{0}, {1}, {2}, {3}, {4},{5}, {6}, {7}, {8}, {9}, {10}, {11}".format(self.name, self.type1, self.type2, self.total, self.hp, self.attack, self.defense, self.sp, self.sp_attack, self.sp_defense, self.sp_speed,
+        return "{0}, {1}, {2}, {3}, {4},{5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}".format(self.name, self.type1, self.type2, self.total, self.hp, self.attack, self.defense, self.sp, self.sp_attack, self.sp_defense, self.sp_speed,
                                           self.generation, self.legendary)
     def __lt__(self, other):
         return self.attack > other.attack
 
+pokemon_list = []
+
+
 def main():
    with open("pokemons.csv", encoding = "utf8") as file:
        for line in file:
+           pokemon_list.append(line)
            pokemon = Pokemon(line)
            print(pokemon)
+
 main()
