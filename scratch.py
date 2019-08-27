@@ -1,5 +1,6 @@
 class Pokemon():
-    def __init__(self):
+    def __init__(self, name, type1, type2, total, hp, attack, defense, sp, sp_attack, sp_defense, sp_speed, generation,
+                 legendary):
         self.name = name
         self.type1 = type1
         self.type2 = type2
@@ -10,7 +11,7 @@ class Pokemon():
         self.sp = sp
         self.sp_attack= sp_attack
         self.sp_defense = sp_defense
-        self.sp_speed = speed
+        self.sp_speed = sp_speed
         self.generation = generation
         self.legendary = legendary
 
@@ -20,10 +21,11 @@ class Pokemon():
 
     def __lt__(self, other):
 
-def new_obkect
+def new_object():
+    pokemon_object = Pokemon()
+    print(pokemon_object)
 
 
 
 
 
-    Name,Type 1,Type 2,Total,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed,Generation,Legendary
