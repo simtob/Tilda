@@ -22,11 +22,9 @@ class Pokemon():
     def __lt__(self, other):
         return self.attack > other.attack
 
-
 def main():
    with open("pokemons.csv", encoding = "utf8") as file:
        for line in file:
            pokemon = Pokemon(line)
            print(pokemon)
-
 main()
