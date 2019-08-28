@@ -1,36 +1,49 @@
+
+import csv
+import sys
+
 class Pokemon():
-    def __init__(self, name, type1, type2, total, hp, attack, defense, sp, sp_attack, sp_defense, sp_speed, generation,
-                 legendary):
-        self.name = name
-        self.type1 = type1
-        self.type2 = type2
-        self.total = total
-        self.hp = hp
-        self.attack = attack
-        self.defense = defense
-        self.sp = sp
-        self.sp_attack= sp_attack
-        self.sp_defense = sp_defense
-        self.sp_speed = sp_speed
-        self.generation = generation
-        self.legendary = legendary
+    def __init__(self, pokemon_dict):
+        clean_line = pokemon_dict.strip()
+        seperated = clean_line.split(",")
+        self.name = seperated[0]
+        self.type1 = seperated[1]
+        self.type2 = seperated[2]
+        self.total = seperated[3]
+        self.hp = seperated[4]
+        self.attack = seperated[5]
+        self.defense = seperated[6]
+        self.sp = seperated[7]
+        self.sp_attack = seperated[8]
+        self.sp_defense = seperated[9]
+        self.sp_speed = seperated[10]
+        self.generation = seperated[11]
+        self.legendary = seperated[12]
 
     def __str__(self):
         return "{0}, {1}, {2}, {3}, {4},{5}, {6}, {7}, {8}, {9}, {10}, {11}".format(self.name, self.type1, self.type2, self.total, self.hp, self.attack, self.defense, self.sp, self.sp_attack, self.sp_defense, self.sp_speed,
                                           self.generation, self.legendary)
+    def __lt__(self, other):
+        return self.attack > other.attack
 
 
 
-def new_object():
-    pokemon_object = Pokemon()
-    print(pokemon_object)
 
 
+def main():
+   with open("pokemons.csv", encoding = "utf8") as file:
+       for line in file:
+           pokemon = Pokemon(line)
+           print(pokemon)
+main()
 
-def read_list():
-    with open("pokemons.csv") as listor:
-        list = [line.split() for line in listor]  # create a list of lists
-        for i, x in enumerate(list):  # print the list items
-            print("line{0} = {1}".format(i, x))
+def search():
+    number = input('Skriv in namnet på pokemån\n')
+    pokemon_file = csv.reader(open('pokemons.csv', "r"), delimiter=",")
 
-read_list()
+    for rad in pokemon_file:
+        if number == rad[1]:
+
+               print(rad)
+
+search()
