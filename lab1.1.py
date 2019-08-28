@@ -54,7 +54,7 @@ def test_defense():
 
 def test_generation():
     if pokemon_list[17] == pokemon_list[18]:
-        print("#17 pokemon has same generation than #18")
+        print("#17 pokemon has same generation as #18")
     else:
         print("Error")
 
