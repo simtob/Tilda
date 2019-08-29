@@ -74,7 +74,7 @@ def main():
        for line in file:
            attributes = line.strip().split(",")
            pokemon = Pokemon(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5], attributes[6], attributes[7], attributes[8],attributes[9], attributes[10], attributes[11], attributes[12])
-           pokemon_list.append(pokemon)
+           pokemon_list.append(pokemon) #Lägger till i slutet
 
 main()
 test_attack()
