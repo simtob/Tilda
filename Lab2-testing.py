@@ -1,18 +1,21 @@
 from array import array
 
-class ArrayQ(object):
+class ArrayQ():
 
     def __init__(self):
-        self.items = []
+        self.data = []
+
+    def __str__(self):
+        return str(self.data)
 
     def isEmpty(self):
-        return self.items == []
+        return self.data == []
 
     def enqueue(self, item):
-        self.items.insert(0, item)
+        self.data.insert(0, item)
 
     def dequeue(self):
-        return self.items.pop()
+        return self.data.pop()
 
 
 q = ArrayQ()
@@ -25,29 +28,14 @@ if (x == 1 and y == 2):
 else:
     print("FAILED")
 
+z = ArrayQ()
+for i in range(1,14):
+    z.enqueue(i)
+print(z)
 
 
-nummer = input("Nummer: ")
-korten = nummer.split()
-
-class ArrayKort(object):
-
-    def __init__(self):
-        self.kortnummer = korten
-
-    def isEmpty(self):
-        return self.kortnummer == korten
-
-    def enqueue(self, korten):
-        self.kortnummer.insert(0, korten)
-
-    def dequeue(self):
-        return self.kortnummer.pop()
+while not z.isEmpty():
+    card = z.dequeue()
+    z.enqueue(card)
 
 
-for i in korten:
-    v = ArrayKort()
-    x = v.dequeue()
-    v.enqueue(x)
-
-print(x)
