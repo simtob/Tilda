@@ -75,10 +75,11 @@ def main():
            attributes = line.strip().split(",")
            pokemon = Pokemon(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5], attributes[6], attributes[7], attributes[8],attributes[9], attributes[10], attributes[11], attributes[12])
            pokemon_list.append(pokemon)
+   test_attack()
+   testa_HP()
+   test_defense()
+   test_generation()
+   search_pokemon()
 
 main()
-test_attack()
-testa_HP()
-test_defense()
-test_generation()
-search_pokemon()
+
