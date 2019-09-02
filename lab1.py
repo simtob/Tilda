@@ -18,8 +18,8 @@ class Pokemon():
         self.legendary = legendary
 
     def __str__(self):
-        return (self.number, self.name, self.type1, self.type2, self.total, self.hp, self.attack, self.defense, self.sp_attack, self.sp_defense, self.sp_speed,
-                                          self.generation, self.legendary)
+        return self.number, self.name, self.type1, self.type2, self.total, self.hp, self.attack, self.defense, self.sp_attack, self.sp_defense, self.sp_speed, self.generation, self.legendary
+
     def __lt__(self, other):
         return self.attack < other.attack, self.hp < other.hp
 
@@ -28,8 +28,6 @@ class Pokemon():
 
     def __eq__(self, other):
         return self.generation == other.generation
-
-
 
 
 pokemon_list = []
@@ -74,11 +72,13 @@ def main():
        for line in file:
            attributes = line.strip().split(",")
            pokemon = Pokemon(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5], attributes[6], attributes[7], attributes[8],attributes[9], attributes[10], attributes[11], attributes[12])
-           pokemon_list.append(pokemon) #Lägger till i slutet
+           pokemon_list.append(pokemon)
+
+   test_attack()
+   testa_HP()
+   test_defense()
+   test_generation()
+   search_pokemon()
 
 main()
-test_attack()
-testa_HP()
-test_defense()
-test_generation()
-search_pokemon()
+

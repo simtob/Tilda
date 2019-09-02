@@ -1,20 +1,24 @@
 from array import array
 
-class ArrayQ(object):
+
+class ArrayQ():
 
     def __init__(self):
-        self.items = []
+        self.data = []
 
     def isEmpty(self):
-        return self.items == []
+        return self.data == []
 
     def enqueue(self, item):
-        self.items.insert(0, item)
+        self.data.insert(0, item)
 
     def dequeue(self):
-        return self.items.pop()
+        return self.data.pop()
 
+    def size(self):
+        return(len(self.data))
 
+"""
 q = ArrayQ()
 q.enqueue(1)
 q.enqueue(2)
@@ -24,30 +28,23 @@ if (x == 1 and y == 2):
     print("OK")
 else:
     print("FAILED")
+"""
+
+def hotPotato(namelist, num):
+    simqueue = ArrayQ()
+    for name in namelist:
+        simqueue.enqueue(name)
+        print(name)
+
+    while simqueue.size() > 1:
+        for i in range(num):
+            simqueue.enqueue(simqueue.dequeue())
+
+        simqueue.dequeue()
+
+    return simqueue.dequeue()
+
+print(hotPotato([1,2,3,4,5,6,7,8,9,10,11,12,13],1))
 
 
 
-nummer = input("Nummer: ")
-korten = nummer.split()
-
-class ArrayKort(object):
-
-    def __init__(self):
-        self.kortnummer = korten
-
-    def isEmpty(self):
-        return self.kortnummer == korten
-
-    def enqueue(self, korten):
-        self.kortnummer.insert(0, korten)
-
-    def dequeue(self):
-        return self.kortnummer.pop()
-
-
-for i in korten:
-    v = ArrayKort()
-    x = v.dequeue()
-    v.enqueue(x)
-
-print(x)
