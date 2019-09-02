@@ -58,18 +58,37 @@ else:
 
 
 
-v = ArrayQ()
+
 
 nummerlista = input('listan med kortnummer: ')
 
 
 
 korten = [int(x) for x in str(nummerlista)]
-print(korten)
 
-v.enqueue(korten[0])
+v = ArrayQ()
+v.enqueue(korten[1])
+x = v.dequeue()
+v.enqueue(korten[3])
+y = v.dequeue()
+v.enqueue(korten[3])
+z = v.dequeue()
+v.enqueue(korten[4])
+k = v.dequeue()
+v.enqueue(korten[5])
+l = v.dequeue()
 
 print ("stack:", v._item)
+
+
+
+
+print(x, y, z, k, l)
+
+
+
+
+
 
 
 
