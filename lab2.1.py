@@ -34,6 +34,15 @@ class ArrayQ():
         self._item.append(element)
         self._size = self._size + 1
 
+    def enqueue_front(self):
+        if self.isEmpty():
+            raise Empty("Tom")
+        z = self._item[self._fronten]
+        self._item[self._fronten] = self._item.append(self._fronten)
+        self._fronten = self._fronten + 1
+        self._size = self._size + 1
+        return z
+
     def dequeue(self):
         if self.isEmpty():
             raise Empty ("Tom")
@@ -68,22 +77,37 @@ korten = [int(x) for x in str(nummerlista)]
 
 v = ArrayQ()
 v.enqueue(korten[0])
-x = v.dequeue()
 v.enqueue(korten[1])
-y = v.dequeue()
 v.enqueue(korten[2])
-z = v.dequeue()
 v.enqueue(korten[3])
-k = v.dequeue()
 v.enqueue(korten[4])
-l = v.dequeue()
 
 print ("stack:", v._item)
 
+v.enqueue_front()
+
+x = v.dequeue()
+
+v.enqueue_front()
+
+y = v.dequeue()
+
+v.enqueue_front()
 
 
 
-print(x, y, z, k, l)
+
+
+
+
+print ("stack:", v._item)
+
+print(x, y)
+
+
+
+
+
 
 
 
