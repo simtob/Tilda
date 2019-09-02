@@ -1,12 +1,10 @@
 from array import array
 
+
 class ArrayQ():
 
     def __init__(self):
         self.data = []
-
-    def __str__(self):
-        return str(self.data)
 
     def isEmpty(self):
         return self.data == []
@@ -17,7 +15,10 @@ class ArrayQ():
     def dequeue(self):
         return self.data.pop()
 
+    def size(self):
+        return(len(self.data))
 
+"""
 q = ArrayQ()
 q.enqueue(1)
 q.enqueue(2)
@@ -27,15 +28,23 @@ if (x == 1 and y == 2):
     print("OK")
 else:
     print("FAILED")
+"""
 
-z = ArrayQ()
-for i in range(1,14):
-    z.enqueue(i)
-print(z)
+def hotPotato(namelist, num):
+    simqueue = ArrayQ()
+    for name in namelist:
+        simqueue.enqueue(name)
+        print(name)
 
+    while simqueue.size() > 1:
+        for i in range(num):
+            simqueue.enqueue(simqueue.dequeue())
 
-while not z.isEmpty():
-    card = z.dequeue()
-    z.enqueue(card)
+        simqueue.dequeue()
+
+    return simqueue.dequeue()
+
+print(hotPotato([1,2,3,4,5,6,7,8,9,10,11,12,13],1))
+
 
 
