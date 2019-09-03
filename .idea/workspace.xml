@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/arrayQFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2.py" afterDir="false" />
     </list>
@@ -236,7 +237,13 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1567521037381</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Vet inte va jag gjort, testat lite">
+      <created>1567525482146</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1567525482146</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

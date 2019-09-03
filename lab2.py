@@ -1,22 +1,6 @@
-from array import array
+from arrayQFile import ArrayQ
 
-class ArrayQ():
-
-    def __init__(self):
-        self.__data = array("i") #sign for int
-
-    def isEmpty(self):
-        return self.__data == array("i")
-
-    def enqueue(self, item):
-        self.__data.insert(0, item)
-
-    def dequeue(self):
-        return self.__data.pop()
-
-    def size(self):
-        return(len(self.__data))
-
+#SAKNAR experimentering med binära träd, se lab instruktion
 
 q = ArrayQ()
 q.enqueue(1)
@@ -28,21 +12,24 @@ if (x == 1 and y == 2):
 else:
     print("FAILED")
 
+#Uppgift 3 och 4
+#Skilland på privata och inte privata attribut?
 
 def cardTrick():
     q = ArrayQ()
-    cardNumb = [int(x) for x in input("Ange kort: ").split()]
-    for i in cardNumb:
-        q.enqueue(i)
-    print("kort i rätt ordning: ")
+    cardDeck = [int(x) for x in input("Ange kort: ").split()]
+    for card in cardDeck:
+        q.enqueue(card)
 
     while not q.isEmpty():
-        cardNumb[0] = q.dequeue()
-        q.enqueue(cardNumb[0])
-        print(q.dequeue(), end=" ")
+        cardDeck[0] = q.dequeue()
+        q.enqueue(cardDeck[0])
+        print(q.dequeue(), end=" ") #printar ut korten i rätt ordning
 
-cardTrick()
+if __name__ == "__main__":
+    cardTrick()
 
+#Uppgift 5:
 
 
 
