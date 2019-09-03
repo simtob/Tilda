@@ -1,9 +1,3 @@
-class Node:
-
-   def __init__(self, x, next = None):
-      self.data = x
-      self.next = next
-
 class Queue:
 
     def __init__(self):
@@ -17,15 +11,12 @@ class Queue:
             ny.next = self.first
                                 # Om kön är tom blir det på ett sätt...                           # ...som du får tänka ut själv.
         else:                   # Annars blir det på ett annat sätt..
-            ny.next = self.last                 # ...som du också får lura ut själv.
+            ny.next = self.last          # ...som du också får lura ut själv.
 
     def dequeue(self):
-        """Plockar ut och returnerar det som står först i kön """
         x = self.first.data
         self.first = self.first.next
-        self.first.pop()
         return x
-
 
     def isEmpty(self):
         """Returnerar True om kön är tom, False annars """
@@ -34,29 +25,26 @@ class Queue:
         else:
             return False
 
-class Stack:
+myQueue = Queue()
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
-   def __init__(self):
-      self.top = None
+def makeQueue():
+    for i in lista:
+        myQueue.enqueue(i)
+        print("Lista: " + str(i))
+    print(lista)
+    return myQueue
 
-   def push(self,x):
-      """Lägger x överst på stacken """
-      ny = Node(x)
-      ny.next = self.top
-      self.top = ny
+makeQueue()
 
-   def pop(self):
-      """Plockar ut och returnerar det översta elementet """
-      x = self.top.data
-      self.top = self.top.next
-      return x
+def cardTrick():
+    newQueue = Queue()
+    if not myQueue.isEmpty():
+        for i in range(0,12):
+            i = myQueue.dequeue()
+            newQueue.enqueue(i)
+            second = myQueue.dequeue()
+            myQueue.enqueue(second)
+            print(newQueue)
 
-   def isEmpty(self):
-      """Returnerar True om stacken är tom, False annars"""
-      if self.top == None:
-         return True
-      else:
-         return False
-
-
-
+cardTrick()

@@ -17,15 +17,6 @@ class ArrayQ():
     def isEmpty(self):
         return self._size == 0
 
-    def push(self, elemnt): #elemnt är argumentet
-        self._item.append(elemnt)
-
-    def pop(self):
-        if self.isEmpty():
-            raise Empty("Stack är tom")
-        return self._item.pop()
-
-
     def top(self):
         if self.isEmpty():
             raise Empty("Stack är tom")
@@ -35,18 +26,17 @@ class ArrayQ():
         self._item.append(element)
         self._size = self._size + 1
 
-
     def dequeue(self):
         if self.isEmpty():
             raise Empty ("Tom")
-        v = self._item[self._fronten]
-        self._item[self._fronten] = None
-        self._fronten = self._fronten + 1
-        self._size = self._size - 1
-        return v
+        v = self._item[self._fronten] #v (kortet) blir första platsen i vår lista
+        self._item[self._fronten] = None #gör om den som är först i kön till None
+        self._fronten = self._fronten + 1 #fronten går över till kortet efter det första.
+        self._size = self._size - 1 #kön minskas då vi lagt ut ett kort
+        return v #det som dequeueats
 
     def first_delete(self):
-        value = self._item.pop(self._fronten)
+        value = self._item.pop(self._fronten) #Platsen som blivit till none tas bort.
         return value
 
 q = ArrayQ()
@@ -79,7 +69,6 @@ v.enqueue(r)
 
 
 print ("stack:", v._item)
-
 
 v.enqueue(x)
 v.first_delete()
