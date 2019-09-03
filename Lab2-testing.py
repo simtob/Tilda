@@ -1,6 +1,5 @@
 from array import array
 
-
 class ArrayQ():
 
     def __init__(self):
@@ -29,9 +28,44 @@ if (x == 1 and y == 2):
 else:
     print("FAILED")
 """
+class Node:
+
+   def __init__(self, x, next = None):
+      self.data = x
+      self.next = next
+
+
+
+class Queue:
+
+    def __init__(self):
+       self.first = None
+       self.last = None
+       self._queue = 0
+
+    def enqueue(self,x):
+        """Stoppar in x sist i kön """
+        self._queue += 1
+        if self.first == None:
+
+        else:
+            return
+
+    def dequeue(self):
+        """Plockar ut och returnerar det som står först i kön """
+        x = self.first.data
+        self.first = self.first.next
+        return x
+
+    def isEmpty(self):
+        """Returnerar True om kön är tom, False annars """
+        if self._queue == 0:
+            print("Tom kö...")
+            return self._queue==0
+
 
 def hotPotato(namelist, num):
-    simqueue = ArrayQ()
+    simqueue = Queue()
     for name in namelist:
         simqueue.enqueue(name)
         print(name)
