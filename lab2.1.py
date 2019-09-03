@@ -4,36 +4,6 @@ class Empty(Exception):
     pass
 
 
-
-class ArrayQ():
-
-    def __init__(self):
-        self.data = []
-
-    def isEmpty(self):
-        return self.data == []
-
-    def enqueue(self, item):
-        self.data.insert(0, item)
-
-    def dequeue(self):
-        return self.data.pop()
-
-    def size(self):
-        return(len(self.data))
-
-"""
-q = ArrayQ()
-q.enqueue(1)
-q.enqueue(2)
-x = q.dequeue()
-y = q.dequeue()
-if (x == 1 and y == 2):
-    print("OK")
-else:
-    print("FAILED")
-"""
-
 class ArrayQ():
 
     def __init__(self):
@@ -44,6 +14,9 @@ class ArrayQ():
     def __len(self):
         return self._size
 
+    def isEmpty(self):
+        return self._size == 0
+
     def push(self, elemnt): #elemnt är argumentet
         self._item.append(elemnt)
 
@@ -51,6 +24,7 @@ class ArrayQ():
         if self.isEmpty():
             raise Empty("Stack är tom")
         return self._item.pop()
+
 
     def top(self):
         if self.isEmpty():
@@ -61,14 +35,6 @@ class ArrayQ():
         self._item.append(element)
         self._size = self._size + 1
 
-    def enqueue_front(self):
-        if self.isEmpty():
-            raise Empty("Tom")
-        z = self._item[self._fronten]
-        self._item[self._fronten] = self._item.append(self._fronten)
-        self._fronten = self._fronten + 1
-        self._size = self._size + 1
-        return z
 
     def dequeue(self):
         if self.isEmpty():
@@ -79,7 +45,9 @@ class ArrayQ():
         self._size = self._size - 1
         return v
 
-
+    def first_delete(self):
+        value = self._item.pop(self._fronten)
+        return value
 
 q = ArrayQ()
 q.enqueue(1)
@@ -91,38 +59,57 @@ if (x == 1 and y == 2):
 else:
     print("FAILED")
 
-nummerlista = input('listan med kortnummer: ')
 
-korten = [int(x) for x in str(nummerlista)]
+
+
+
+
+
+
+
+x, y, z, e, r = [int(x) for x in input("Enter three value: ").split()]
+
 
 v = ArrayQ()
-v.enqueue(korten[0])
-v.enqueue(korten[1])
-v.enqueue(korten[2])
-v.enqueue(korten[3])
-v.enqueue(korten[4])
-
-print ("stack:", v._item)
-
-v.enqueue_front()
-
-x = v.dequeue()
-
-v.enqueue_front()
-
-y = v.dequeue()
-
-v.enqueue_front()
-
-
-
-
-
+v.enqueue(x)
+v.enqueue(y)
+v.enqueue(z)
+v.enqueue(e)
+v.enqueue(r)
 
 
 print ("stack:", v._item)
 
-print(x, y)
+
+v.enqueue(x)
+v.first_delete()
+l = v.dequeue()
+
+
+v.enqueue(y)
+v.first_delete()
+m = v.dequeue()
+
+v.enqueue(z)
+v.first_delete()
+z = v.dequeue()
+
+v.enqueue(e)
+v.first_delete()
+h = v.dequeue()
+
+v.enqueue(r)
+v.first_delete()
+g = v.dequeue()
+
+
+
+
+print("stack:", v._item)
+
+print(l, m, z, h, g)
+
+
 
 
 
