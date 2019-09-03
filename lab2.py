@@ -3,19 +3,19 @@ from array import array
 class ArrayQ():
 
     def __init__(self):
-        self.data = array("i") #sign for int
+        self.__data = array("i") #sign for int
 
     def isEmpty(self):
-        return self.data == array("i")
+        return self.__data == array("i")
 
     def enqueue(self, item):
-        self.data.insert(0, item)
+        self.__data.insert(0, item)
 
     def dequeue(self):
-        return self.data.pop()
+        return self.__data.pop()
 
     def size(self):
-        return(len(self.data))
+        return(len(self.__data))
 
 
 q = ArrayQ()
@@ -31,14 +31,18 @@ else:
 
 def cardTrick():
     q = ArrayQ()
-    while q.size() < 5:
-        cardInput = [int(x) for x in input("Ange kort: ").split()]
-        for x in cardInput:
-            q.enqueue(x)
-        print(x)
-    return q
+    cardNumb = [int(x) for x in input("Ange kort: ").split()]
+    for i in cardNumb:
+        q.enqueue(i)
+    print("kort i rätt ordning: ")
+
+    while not q.isEmpty():
+        cardNumb[0] = q.dequeue()
+        q.enqueue(cardNumb[0])
+        print(q.dequeue(), end=" ")
 
 cardTrick()
+
 
 
 
