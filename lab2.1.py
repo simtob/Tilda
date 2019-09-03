@@ -4,36 +4,6 @@ class Empty(Exception):
     pass
 
 
-
-class ArrayQ():
-
-    def __init__(self):
-        self.data = []
-
-    def isEmpty(self):
-        return self.data == []
-
-    def enqueue(self, item):
-        self.data.insert(0, item)
-
-    def dequeue(self):
-        return self.data.pop()
-
-    def size(self):
-        return(len(self.data))
-
-"""
-q = ArrayQ()
-q.enqueue(1)
-q.enqueue(2)
-x = q.dequeue()
-y = q.dequeue()
-if (x == 1 and y == 2):
-    print("OK")
-else:
-    print("FAILED")
-"""
-
 class ArrayQ():
 
     def __init__(self):
@@ -43,6 +13,9 @@ class ArrayQ():
 
     def __len(self):
         return self._size
+
+    def isEmpty(self):
+        return self._size == 0
 
     def push(self, elemnt): #elemnt är argumentet
         self._item.append(elemnt)
@@ -114,17 +87,11 @@ y = v.dequeue()
 
 v.enqueue_front()
 
-
-
-
-
-
-
 print ("stack:", v._item)
 
 print(x, y)
 
-
+makeQueue()
 
 
 

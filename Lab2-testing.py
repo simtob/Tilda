@@ -28,32 +28,25 @@ if (x == 1 and y == 2):
 else:
     print("FAILED")
 """
-class Node:
-
-   def __init__(self, x, next = None):
-      self.data = x
-      self.next = next
-
-
-
 class Queue:
 
     def __init__(self):
        self.first = None
        self.last = None
-       self._queue = 0
+       self._queue = []
+       self.size = 0
 
     def enqueue(self,x):
         """Stoppar in x sist i kön """
-        self._queue += 1
+        self.size += 1
         if self.first == None:
-
-        else:
-            return
+            x = self.last
+            print(x)
+            return x
 
     def dequeue(self):
         """Plockar ut och returnerar det som står först i kön """
-        x = self.first.data
+        x = self.first
         self.first = self.first.next
         return x
 
@@ -63,22 +56,27 @@ class Queue:
             print("Tom kö...")
             return self._queue==0
 
+class Node:
 
-def hotPotato(namelist, num):
+   def __init__(self, x, next = None):
+      self.data = x
+      self.next = next
+
+def hotPotato():
+    namelist = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     simqueue = Queue()
     for name in namelist:
         simqueue.enqueue(name)
         print(name)
 
-    while simqueue.size() > 1:
-        for i in range(num):
+    while simqueue != 0:
+        for i in range(13):
             simqueue.enqueue(simqueue.dequeue())
-
         simqueue.dequeue()
 
     return simqueue.dequeue()
 
-print(hotPotato([1,2,3,4,5,6,7,8,9,10,11,12,13],1))
+hotPotato()
 
 
 

@@ -23,24 +23,27 @@ class Node:
       self.next = next
 
 
-class Queue:
+class Queue():
     def __init__(self):
        self.__queue = []
-       self.size = 0
+       self.__size = 0
        self.first = None
        self.last = None
 
-    def enqueue(self,item):
+    def enqueue(self,element):
         """Stoppar in x sist i kön """
-        self.__queue.insert(0, item)
-        self.size += 1
+        z = self.__queue.append(element)
+        self.__size = self.__size + 1
         self.first = self.__queue[0]
+        return z
 
 
     def dequeue(self):
         """Plockar ut och returnerar det som står först i kön """
-        self.size -= 1
-        return self.__queue.pop()
+        self.__size -= 1
+        self.first = self.first.next
+        self.__queue.pop()
+        return self.first
 
 
     def isEmpty(self):
@@ -66,11 +69,14 @@ def makeQueue():
     while queue < 3:
         queue += 1
         numberInput = input("Input number: ")
-        numberList = [int(numberInput)]
+        numberList = []
+        numberList.append(int(numberInput))
         for i in numberList:
             myQueue.enqueue(i)
-        print(numberList)
-    return myQueue
+            print(i)
+    return numberList
+
+
 
 
 
