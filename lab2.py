@@ -31,11 +31,12 @@ else:
 
 def cardTrick():
     q = ArrayQ()
-    while not q.isEmpty():
+    while q.size() < 5:
         cardInput = [int(x) for x in input("Ange kort: ").split()]
         for x in cardInput:
             q.enqueue(x)
         print(x)
+    return q
 
 cardTrick()
 
