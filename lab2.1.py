@@ -67,7 +67,7 @@ else:
 
 
 
-x, y, z, e, r = [int(x) for x in input("Enter three value: ").split()]
+x, y, z, e, r = [int(x) for x in input("skriv in 5 kort med mellanrum: ").split()]
 
 
 v = ArrayQ()
