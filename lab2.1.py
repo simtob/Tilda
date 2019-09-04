@@ -10,7 +10,38 @@ if __name__ == "__main__":
         pass
 
 
-""""
+"""q = ArrayQ()
+q.enqueue(1)
+q.enqueue(2)
+x = q.dequeue()
+y = q.dequeue()
+if (x == 1 and y == 2):
+    print("OK")
+else:
+    print("FAILED")
+"""
+
+
+
+
+
+def cardTrick():
+    q = LinkedQ()
+    cardNumb = [int(x) for x in input("Ange kort: ").split()]
+    for i in cardNumb:
+        q.enqueue(i)
+    print("kort i rätt ordning: ")
+
+    while not q.isEmpty():
+        cardNumb[0] = q.dequeue()
+        q.enqueue(cardNumb[0])
+        print(q.dequeue(), end=" ")
+
+cardTrick()
+
+
+
+
 class TestQueue(unittest.TestCase):
 
     def test_isEmpty(self):
@@ -32,66 +63,6 @@ class TestQueue(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-"""
-
-"""q = ArrayQ()
-q.enqueue(1)
-q.enqueue(2)
-x = q.dequeue()
-y = q.dequeue()
-if (x == 1 and y == 2):
-    print("OK")
-else:
-    print("FAILED")
-"""
-
-
-
-
-
-
-
-"""
-korten = [int(x) for x in input("skriv in 13 kort med mellanrum: ").split()]
-
-print(korten)
-
-q = ArrayQ()
-
-temp = korten.copy()
-
-for kort in temp:
-    q.enqueue(kort)
-
-while not q.isEmpty():
-    for kort in temp:
-        q.enqueue(kort)
-        d = q.dequeue()
-        kort = q.dequeue()
-        print(kort)
-
-"""
-
-
-
-def cardTrick():
-    q = LinkedQ()
-    cardNumb = [int(x) for x in input("Ange kort: ").split()]
-    for i in cardNumb:
-        q.enqueue(i)
-    print("kort i rätt ordning: ")
-
-    while not q.isEmpty():
-        cardNumb[0] = q.dequeue()
-        q.enqueue(cardNumb[0])
-        print(q.dequeue(), end=" ")
-
-cardTrick()
-
-
-
-
-
 
 
 
