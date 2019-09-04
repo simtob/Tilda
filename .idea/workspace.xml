@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="" />
+    <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab2-testing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2.2.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +249,13 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1567526261481</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="Vet inte va jag gjort, testat lite">
+      <created>1567603547716</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1567603547716</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
