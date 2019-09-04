@@ -1,45 +1,40 @@
+import unittest
+
+from arrayQFile_1 import ArrayQ
+from linkedQFile import LinkedQ
 
 
-class Empty(Exception):
-    pass
+if __name__ == "__main__":
+
+    class Empty(Exception):
+        pass
 
 
-class ArrayQ():
+""""
+class TestQueue(unittest.TestCase):
 
-    def __init__(self):
-        self._item = [] #Detta blir en lista då vi inte har arrays i phython. Använder alltså lista för att implemetera arrays.
-        self._size = 0
-        self._fronten = 0
+    def test_isEmpty(self):
+        #isEmpty ska returnera True för tom kö, False annars
+        q = LinkedQ()
+        self.assertTrue(q.isEmpty(), "isEmpty på tom kö")
+        q.enqueue(17)
+        self.assertFalse(q.isEmpty(), "isEmpty på icke-tom kö")
 
-    def __len(self):
-        return self._size
+    def test_order(self):
+        #Kontrollerar att kö-ordningen blir rätt
+        q = LinkedQ()
+        q.enqueue(1)
+        q.enqueue(2)
+        q.enqueue(3)
+        self.assertEqual(q.dequeue(), 1)
+        self.assertEqual(q.dequeue(), 2)
+        self.assertEqual(q.dequeue(), 3)
 
-    def isEmpty(self):
-        return self._size == 0
+if __name__ == "__main__":
+    unittest.main()
+"""
 
-    def top(self):
-        if self.isEmpty():
-            raise Empty("Stack är tom")
-        return self._item[-1]
-
-    def enqueue(self, element):
-        self._item.append(element)
-        self._size = self._size + 1
-
-    def dequeue(self):
-        if self.isEmpty():
-            raise Empty ("Tom")
-        v = self._item[self._fronten] #v (kortet) blir första platsen i vår lista
-        self._item[self._fronten] = None #gör om den som är först i kön till None
-        self._fronten = self._fronten + 1 #fronten går över till kortet efter det första.
-        self._size = self._size - 1 #kön minskas då vi lagt ut ett kort
-        return v #det som dequeueats
-
-    def first_delete(self):
-        value = self._item.pop(self._fronten) #Platsen som blivit till none tas bort.
-        return value
-
-q = ArrayQ()
+"""q = ArrayQ()
 q.enqueue(1)
 q.enqueue(2)
 x = q.dequeue()
@@ -48,6 +43,7 @@ if (x == 1 and y == 2):
     print("OK")
 else:
     print("FAILED")
+"""
 
 
 
@@ -55,48 +51,42 @@ else:
 
 
 
+"""
+korten = [int(x) for x in input("skriv in 13 kort med mellanrum: ").split()]
 
+print(korten)
 
-x, y, z, e, r = [int(x) for x in input("skriv in 5 kort med mellanrum: ").split()]
+q = ArrayQ()
 
+temp = korten.copy()
 
-v = ArrayQ()
-v.enqueue(x)
-v.enqueue(y)
-v.enqueue(z)
-v.enqueue(e)
-v.enqueue(r)
+for kort in temp:
+    q.enqueue(kort)
 
+while not q.isEmpty():
+    for kort in temp:
+        q.enqueue(kort)
+        d = q.dequeue()
+        kort = q.dequeue()
+        print(kort)
 
-print ("stack:", v._item)
-
-v.enqueue(x)
-v.first_delete()
-l = v.dequeue()
-
-
-v.enqueue(y)
-v.first_delete()
-m = v.dequeue()
-
-v.enqueue(z)
-v.first_delete()
-z = v.dequeue()
-
-v.enqueue(e)
-v.first_delete()
-h = v.dequeue()
-
-v.enqueue(r)
-v.first_delete()
-g = v.dequeue()
+"""
 
 
 
+def cardTrick():
+    q = LinkedQ()
+    cardNumb = [int(x) for x in input("Ange kort: ").split()]
+    for i in cardNumb:
+        q.enqueue(i)
+    print("kort i rätt ordning: ")
 
-print("stack:", v._item)
+    while not q.isEmpty():
+        cardNumb[0] = q.dequeue()
+        q.enqueue(cardNumb[0])
+        print(q.dequeue(), end=" ")
 
-print(l, m, z, h, g)
+cardTrick()
 
 
 
@@ -107,8 +97,7 @@ print(l, m, z, h, g)
 
 
 
-
-
+#7 1 12 2 8 3 11 4 9 5 13 6 10
 
 
 
