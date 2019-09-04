@@ -27,7 +27,9 @@ def cardTrick():
 if __name__ == "__main__":
     cardTrick()
 
-#Uppgift 5:
+#Uppgift 5: Finns i linkedQFile_1
+#Uppgift 6: testLinkedQ filen innehåller testet som körs
+#Uppgift 7: importera LinkedQ klassen och kolla om det fungerar, ja det gör det.
 
 
 

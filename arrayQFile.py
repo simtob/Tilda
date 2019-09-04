@@ -18,7 +18,7 @@ class ArrayQ():
     def size(self):
         return(len(self.__data))
 """
-
+class ArrayQ():
 
     def __init__(self):
         self._first = None
@@ -51,3 +51,8 @@ class ArrayQ():
 
     def size(self):
         return (len(self.__data))
+
+class Node():
+    def __init__(self, x, next=None):
+        self.value = x
+        self.next = next
