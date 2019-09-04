@@ -1,7 +1,5 @@
 from arrayQFile import ArrayQ
 
-#SAKNAR experimentering med binära träd, se lab instruktion
-
 q = ArrayQ()
 q.enqueue(1)
 q.enqueue(2)

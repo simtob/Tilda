@@ -1,20 +1,6 @@
 class Empty(Exception):
     pass
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ArrayQ():
 
     def __init__(self):
