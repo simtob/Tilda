@@ -46,6 +46,20 @@ class ArrayQ():
         value = self._item.pop(self._fronten)
         return value
 
+    def insert_item(self, index, objectt):
+        self._item.insert(index, objectt)
+
+    def remove_first(self, xobj):
+        self._item.remove(xobj)
+
+q = ArrayQ()
+q.enqueue(1)
+q.enqueue(2)
+print(q._item)
+q.insert_item(1, 76)
+print(q._item)
+q.remove_first(1)
+print(q._item)
 
 
 
