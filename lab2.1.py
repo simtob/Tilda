@@ -10,7 +10,7 @@ if __name__ == "__main__":
         pass
 
 
-"""q = ArrayQ()
+q = ArrayQ()
 q.enqueue(1)
 q.enqueue(2)
 x = q.dequeue()
@@ -19,7 +19,7 @@ if (x == 1 and y == 2):
     print("OK")
 else:
     print("FAILED")
-"""
+
 
 
 
@@ -35,10 +35,23 @@ def cardTrick():
     while not q.isEmpty():
         cardNumb[0] = q.dequeue()
         q.enqueue(cardNumb[0])
-        print(q.dequeue(), end=" ")
+        print(q.dequeue(), end="-")
 
 cardTrick()
 
+def cardTrick():
+    q = ArrayQ()
+    cardNumb = [int(x) for x in input("/n Ange kort: ").split()]
+    for i in cardNumb:
+        q.enqueue(i)
+    print("kort i rätt ordning: ")
+
+    while not q.isEmpty():
+        cardNumb[0] = q.dequeue()
+        q.enqueue(cardNumb[0])
+        print(q.dequeue(), end="-")
+
+cardTrick()
 
 
 
