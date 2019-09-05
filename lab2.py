@@ -12,6 +12,7 @@ else:
 
 #Uppgift 3 och 4
 #Skilland på privata och inte privata attribut?
+#SVAR: Privata an bara tillkallas inuti klassen, tillskillnad från public attributes
 
 def cardTrick():
     q = ArrayQ()

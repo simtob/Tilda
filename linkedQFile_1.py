@@ -15,7 +15,7 @@ class LinkedQ():
 
 
     def enqueue(self, x):
-        new = Node(x,)
+        new = Node(x)
         if self.isEmpty():
             self._first = new
             self._last = new
