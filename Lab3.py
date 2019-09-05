@@ -88,23 +88,6 @@ print("\n")
 
 #Uppgift 3:
 
-engelska = Bintree()
-with open("engelska.txt", "r", encoding = "utf-8") as engelskfil:
-    for rad in engelskfil:
-        ordet = rad.strip()
-        orden = ordet.split()
-        for ord in orden:
-            if ord in engelska:
-                print(ord, end = " ")
-            else:
-                engelska.put(ord)
-print("\n")
-
-if ordet in engelska:
-    pass
-else:
-    if ordet in engelska and ordet in svenska:
-        print(ordet)
 
 
 

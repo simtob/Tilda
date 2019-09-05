@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engelska.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testLab3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testLab3.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lab2">
+  <component name="RunManager" selected="Python.Lab3 (1)">
     <configuration name="Lab3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lab2" />
         <item itemvalue="Python.Lab3 (1)" />
+        <item itemvalue="Python.lab2" />
         <item itemvalue="Python.Lab3" />
         <item itemvalue="Python.arrayQFile" />
         <item itemvalue="Python tests.Unittests in testLinkedQ.py" />
@@ -278,7 +275,13 @@
       <option name="presentableId" value="LOCAL−00018" />
       <updated>1567610366245</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL−00019" summary="Vet inte va jag gjort, testat lite">
+      <created>1567682013736</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1567682013741</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
