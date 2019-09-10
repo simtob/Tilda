@@ -88,6 +88,16 @@ print("\n")
 
 #Uppgift 3:
 
+engelska = Bintree()
+with open("engelska.txt", "r", encoding = "utf-8") as engelskfil:
+    for rad in engelskfil:
+        rad = rad.strip()
+        ordlista = rad.split()
+        for ord in ordlista:
+            if not ord in engelska:
+                if ord in svenska:
+                    print(ord, end= " ")
+                engelska.put(ord)
 
 
 
