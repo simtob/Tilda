@@ -1,6 +1,8 @@
 class Empty(Exception):
     pass
 
+
+
 class ArrayQ():
 
     def __init__(self):
@@ -35,7 +37,7 @@ class ArrayQ():
 
     def dequeue(self):
         if self.isEmpty():
-            raise Empty ("Tom")
+            raise Empty("Tom")
         v = self._item[self._fronten]
         self._item[self._fronten] = None
         self._fronten = self._fronten + 1

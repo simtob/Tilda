@@ -18,6 +18,9 @@ class LinkedQ():
     def __len__(self):
         return self._storlek
 
+    def size(self):
+        return self._storlek
+
     def isEmpty(self):
         return self._storlek == 0
 
