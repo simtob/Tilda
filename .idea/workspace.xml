@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab7.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab7.1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokemons.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +27,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
+      <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
@@ -159,8 +155,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Lab7 (1)" />
-        <item itemvalue="Python.Lab7" />
         <item itemvalue="Python.lab1" />
+        <item itemvalue="Python.Lab7" />
         <item itemvalue="Python.lab7.1" />
         <item itemvalue="Python.Övning3" />
       </list>
@@ -303,7 +299,19 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1568127246481</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="labb3">
+      <created>1568292983351</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1568292983351</updated>
+    </task>
+    <task id="LOCAL−00023" summary="labb3">
+      <created>1568293085804</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1568293085804</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
