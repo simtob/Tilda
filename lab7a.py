@@ -51,7 +51,7 @@ class Hashtable(object):
 
     def hashfunction(self,key,size):
         #själva hash funktionen
-        return str(key % size)
+        return key % size
 
     def goraom_hachen(self, gamlahashen, size):
         return (gamlahashen+1)%size
