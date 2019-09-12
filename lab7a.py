@@ -2,74 +2,59 @@
 from lab7pokemon import Pokemon
 
 
-
-class Node:
-
-   def __init__(self, key = "key", data = None):
-      """key: keyn som anvands vid hashningen
-      data: det objekt som ska hashas in"""
-      self.key = key
-      self.data = data
-
-
 class Hashtable(object):
 
-    def __init__(self, size):
-        self.size = size
-        self.luckor = [None] * self.size
-        self.data = [None] * self.size
+    def __init__(self, storlek):
+        self.storlek = storlek
+        self.luckor = [None] * self.storlek
+        self.info = [None] * self.storlek
 
-    def store(self, key, data):
-        hashvarde = self.hashfunction(key,len(self.luckor))
+    def laggatill(self, nyckel, info):
+        hashvarde = self.hashensfunktion(nyckel,len(self.luckor))
 
         if self.luckor[hashvarde] == None:
-            self.luckor[hashvarde] = key
-            self.data[hashvarde] = data
+            self.luckor[hashvarde] = nyckel
+            self.info[hashvarde] = info
 
         else:
 
-            if self.luckor[hashvarde] == key:
-                self.data[hashvarde] = data
+            if self.luckor[hashvarde] == nyckel:
+                self.info[hashvarde] = info
 
             else:
 
                 nestalucka = self.goraom_hachen(hashvarde,len(self.luckor))
 
-                while self.luckor[nestalucka] != None and self.luckor[nestalucka] != key:
+                while self.luckor[nestalucka] != None and self.luckor[nestalucka] != nyckel:
                     nestalucka = self.goraom_hachen(nestalucka,len(self.luckor))
 
                 if self.luckor[nestalucka] == None:
-                    self.luckor[nestalucka] = key
-                    self.data[nestalucka] = data
+                    self.luckor[nestalucka] = nyckel
+                    self.info[nestalucka] = info
 
                 else:
-                    self.data[nestalucka] = data
+                    self.info[nestalucka] = info
 
-
-
-
-
-    def hashfunction(self,key,size):
+    def hashensfunktion(self,nyckel,storlek):
         #själva hash funktionen
-        return key % size
+        return nyckel%storlek
 
-    def goraom_hachen(self, gamlahashen, size):
-        return (gamlahashen+1)%size
+    def goraom_hachen(self, gamlahashen, storlek):
+        return (gamlahashen+1)%storlek
 
+    def tafram(self, nyckel):
 
-    def search(self, key):
-
-        startluckan = self.hashfunction(key,len(self.luckor))
-        data = None
+        startluckan = self.hashensfunktion(nyckel,len(self.luckor))
+        info = None
         stoppa = False
         hittad = False
         positionen = startluckan
 
         while self.luckor[positionen] != None and not hittad and not stoppa:
 
-            if self.luckor[positionen] == key:
+            if self.luckor[positionen] == nyckel:
                 hittad = True
-                data = self.data[positionen]
+                info = self.info[positionen]
 
             else:
                 positionen = self.goraom_hachen(positionen,len(self.luckor))
@@ -77,13 +62,13 @@ class Hashtable(object):
 
                     stoppa = True
 
-        return data
+        return info
 
-    def __getitem__(self, key):
-        return self.search(key)
+    def __getitem__(self, nyckel):
+        return self.tafram(nyckel)
 
-    def __setitem__(self,key,data):
-        self.store(key,data)
+    def __setitem__(self,nyckel,info):
+        self.laggatill(nyckel,info)
 
 
 x = Hashtable(4)
@@ -114,8 +99,3 @@ def mainss():
 
 
 mainss()
-
-
-
-
-

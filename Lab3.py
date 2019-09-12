@@ -37,7 +37,8 @@ def finns(p, value):
         if value > p.value:
             return finns(p.right, value)
 
-def putta(p, newNode):
+def putta(p, newNode): #Trädet skickar sin rotpekare och det nya ordet till funktionen putta som
+    # Ser till att en ny nod skapas på rätt ställe.
     if p is None:
         p = newNode
         return p
@@ -99,5 +100,7 @@ with open("engelska.txt", "r", encoding = "utf-8") as engelskfil:
                     print(ord, end= " ")
                 engelska.put(ord)
 
+#Balanserat träd -  För varje nod i trädet så är skillnaden i höjden
+# mellan det högra och det vänstra subträdet högst 1
 
-
+#Rekursivt - Repeterar en kodrad

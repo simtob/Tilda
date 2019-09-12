@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrayQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/arrayQFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2.3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedQFile_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/linkedQFile_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +26,11 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
+      <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
     </key>
   </component>
@@ -49,8 +46,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lab3 (1)">
-    <configuration name="Lab3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Lab7 (1)">
+    <configuration name="Lab7 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,7 +59,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab7.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -71,7 +68,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Lab7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/Lab7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lab1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +101,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -92,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="linkedQFile_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lab7.1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,7 +122,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/linkedQFile_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab7.1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,41 +131,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for testLinkedQ.TestQueue.test_isEmpty" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Övning3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testLinkedQ.TestQueue.test_isEmpty&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for testLinkedQ.TestQueue.test_order" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Tilda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;testLinkedQ.TestQueue.test_order&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/Övning3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Lab3 (1)" />
-        <item itemvalue="Python.linkedQFile_1" />
-        <item itemvalue="Python tests.Unittests for testLinkedQ.TestQueue.test_isEmpty" />
-        <item itemvalue="Python.lab2" />
-        <item itemvalue="Python tests.Unittests for testLinkedQ.TestQueue.test_order" />
+        <item itemvalue="Python.Lab7 (1)" />
+        <item itemvalue="Python.lab1" />
+        <item itemvalue="Python.Lab7" />
+        <item itemvalue="Python.lab7.1" />
+        <item itemvalue="Python.Övning3" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +293,25 @@
       <option name="presentableId" value="LOCAL−00020" />
       <updated>1567685991874</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL−00021" summary="labb3">
+      <created>1568127246480</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1568127246481</updated>
+    </task>
+    <task id="LOCAL−00022" summary="labb3">
+      <created>1568292983351</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1568292983351</updated>
+    </task>
+    <task id="LOCAL−00023" summary="labb3">
+      <created>1568293085804</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1568293085804</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +329,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Vet inte va jag gjort, testat lite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vet inte va jag gjort, testat lite" />
+    <MESSAGE value="labb3" />
+    <option name="LAST_COMMIT_MESSAGE" value="labb3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
