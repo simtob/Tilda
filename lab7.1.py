@@ -1,7 +1,8 @@
 
 from lab7pokemon import Pokemon
 
-class DictHash(object):
+
+class Hashtable(object):
 
     def __init__(self, storlek):
         self.storlek = storlek
@@ -70,7 +71,7 @@ class DictHash(object):
         self.laggatill(nyckel,info)
 
 
-x = DictHash(4)
+x = Hashtable(4)
 
 x[1] = "one"
 
@@ -80,18 +81,20 @@ print(x[1])
 
 def mainss():
    with open("pokemons.csv", encoding = "utf8") as file:
-       file.readline() #för att skippa header
-       for line in file:
-           attributes = line.strip().split(",")
-           pokemon = Pokemon(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5],
-                             attributes[6], attributes[7], attributes[8], attributes[9], attributes[10], attributes[11],
-                             attributes[12])
+       #file.readline() #för att skippa header
+       for i, line in enumerate(file):
+           if i == 2:
+               attributes = line.strip().split(",")
+               Pokemon(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4], attributes[5],
+                                 attributes[6], attributes[7], attributes[8], attributes[9], attributes[10], attributes[11],
+                                 attributes[12])
 
-           x = DictHash(1000)
-           x[1] = attributes[0]
-           print(x[1])
+               x = Hashtable(1000)
+               x[1] = attributes[0]
+               print(x[1])
 
-           x.tafram(1)
+
+
 
 
 
