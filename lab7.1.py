@@ -34,17 +34,12 @@ class DictHash(object):
                 else:
                     self.info[nestalucka] = info
 
-
-
-
-
     def hashensfunktion(self,nyckel,storlek):
         #själva hash funktionen
         return nyckel%storlek
 
     def goraom_hachen(self, gamlahashen, storlek):
         return (gamlahashen+1)%storlek
-
 
     def tafram(self, nyckel):
 

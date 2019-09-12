@@ -82,3 +82,11 @@ def main():
 
 main()
 
+
+# Uppgift 1
+
+
+
+
+
+
