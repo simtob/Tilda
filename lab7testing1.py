@@ -166,5 +166,7 @@ main()
 v = Hashtable(10)
 
 v.store("1", "Bulbasaur")
+v.store("2", "Bulbasaur2")
+v.store("0", "Bulbasaur3")
 
 v.print()
