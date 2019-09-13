@@ -135,10 +135,7 @@ class Hashtable(object):
                 data = self.data[positionen]
 
             else:
-                positionen = self.goraom_hachen(positionen,len(self.luckor))
-                if positionen == startluckan:
-
-                    stoppa = True
+                raise KeyError
         print(data)
 
         return data
