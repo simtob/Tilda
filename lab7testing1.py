@@ -139,11 +139,14 @@ class Hashtable(object):
                 if positionen == startluckan:
 
                     stoppa = True
+        print(data)
 
         return data
 
+
     def print(self):
         print(str(self.data))
+
 
 
 
@@ -170,3 +173,5 @@ v.store("2", "Bulbasaur2")
 v.store("0", "Bulbasaur3")
 
 v.print()
+
+v.search("2")
