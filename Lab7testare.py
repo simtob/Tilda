@@ -1,4 +1,4 @@
-#Uppgift 1
+#LABB 7
 
 import operator
 import csv
@@ -65,8 +65,8 @@ class Hashtable:
         elif self.mytabell[index].next is None: #Fall nummer två
             self.mytabell[index].next = Node(key,data) #lägger till nod, början på länkade listan
 
-        elif self.mytabell[index].next is not None: #Fall tre
-            start = self.mytabell[index].next #pekar på vår nod
+        elif self.mytabell[index].next is not None: #Fall tre, platsen har något och fallet efter har något värde
+            start = self.mytabell[index].next
             while start.next is not None:
                 start = start.next
             if start.next is None:

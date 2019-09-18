@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab7testare.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestLab7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashtest (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/hashtest (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab7a.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab7a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab7testing1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab7testing1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab7testare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7testare.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hashtest (1)">
+  <component name="RunManager" selected="Python.Lab7testare">
     <configuration name="Lab7testare" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -162,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hashtest (1)" />
         <item itemvalue="Python.Lab7testare" />
+        <item itemvalue="Python.hashtest (1)" />
         <item itemvalue="Python.lab7testing1" />
         <item itemvalue="Python.TestLab7 (1)" />
         <item itemvalue="Python.lab7a" />
@@ -349,7 +345,13 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1568649003106</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL−00029" summary="labb3">
+      <created>1568810515144</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1568810515145</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
