@@ -1,6 +1,6 @@
 #Testar klassen Hashtabell i filen hashfil.py
+from Lab7testare import Hashtable
 import unittest
-from lab7a import *
 
 #######################################################################
 #       Testerna

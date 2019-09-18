@@ -100,7 +100,6 @@ class Hashtable:
             self.luckor[index] = Node(key, data)
             return
 
-
     #annars gå igenomen länkade listan på given index, sedan lägg till ny node på slutet av listan
         tidigare = node
         while node is not None:
@@ -128,8 +127,7 @@ class Hashtable:
         for i, c in enumerate(key): #för varje karaktär i key
             hashsumman += (i+len(key)) ** ord(c) #lägger till index ? längden av key upphöjt till nuvarnde char Node
             hashsumman = hashsumman % self.size
-
-            return hashsumman
+        return hashsumman
 
 
 

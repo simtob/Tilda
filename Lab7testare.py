@@ -43,33 +43,59 @@ class Node:
         data: det objekt som ska hashas in"""
         self.key = key
         self.data = data
+        self.next = None
 
 
 class Hashtable:
 
-    def __init__(self):
+    def __init__(self, size):
         """size: hashtabellens storlek"""
-        self.dictionary = {}
-        self.size = 0
+        self.size = size
+        self.mytabell = [0] * size * 2
 
     def store(self, key, data):
         """key: nyckeln
            data: objektet som ska lagras
            Stoppar in "data" med nyckeln "key" i tabellen."""
-        self.dictionary[key] = data
+
+        index = hashfunction(self, key) #key får ett index
+        if self.mytabell[index] is 0: #fall nummer ett, när tabellen är tom
+            self.mytabell[index] = Node(key, data) #skapar ny nod
+
+        elif self.mytabell[index].next is None: #Fall nummer två
+            self.mytabell[index].next = Node(key,data) #lägger till nod, början på länkade listan
+
+        elif self.mytabell[index].next is not None: #Fall tre
+            start = self.mytabell[index].next #pekar på vår nod
+            while start.next is not None:
+                start = start.next
+            if start.next is None:
+                start.next = Node(key, data)
+
 
     def search(self, key):
         """key: nyckeln
            Hamtar det objekt som finns lagrat med nyckeln "key" och returnerar det.
            Om "key" inte finns ska vi få en Exception, KeyError """
-        try:
-            print("Data: ", self.dictionary[key])
-            return key
-        except KeyError:
-                print("Wrong key")
+        index = hashfunction(self, key)
+        if self.mytabell[index] == 0:
+            raise KeyError
+
+        elif self.mytabell[index].key == key:
+            return self.mytabell[index].data
+
+        elif self.mytabell[index].next is not None:
+            start = self.mytabell[index].next
+            while start.next is not None:
+                if start.key == key:
+                    return start.data
+                start = start.next
+            if start.key == key:
+                return start.data
+        raise KeyError
 
 
-def hashfunction(key):
+def hashfunction(self, key):
     """key: nyckeln
     Beräknar hashfunktionen för key"""
     result = 0
@@ -77,21 +103,23 @@ def hashfunction(key):
         result = result * 15 + ord(c)  # The ord() method takes a single parameter c,
         # where c is character string of length 1
         # and and returns an integer representing the Unicode code point of the character.
-    print(result%len(key))
-    return result % len(key)
+    return result % self.size*2
+
 """
 class DictHash:
     def __init__(self):
         self.dictionary = {}
+
     def store(self, nyckel, data):
         self.dictionary[nyckel] = data
+
     def search(self, nyckel):
         try:
             print("Data: ", self.dictionary[nyckel])
         except KeyError:
             print("Wrong key")
 """
-q = Hashtable()
+q = Hashtable(10000)
 
 def main():
    with open("pokemons.csv", encoding = "utf8") as file:
@@ -103,4 +131,10 @@ def main():
 
 main()
 
-x = q.search("Bulbasaur")
+
+
+try:
+    print("Bulbasaur " + str(q.search("Bulbasaur")))
+except KeyError:
+    print("Error...")
+

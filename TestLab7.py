@@ -1,7 +1,3 @@
-#Uppgift 1
-
-import operator
-import csv
 
 class Pokemon():
     def __init__(self, number, name, type1, type2, total, hp, attack, defense, sp_attack, sp_defense, sp_speed, generation, legendary):
@@ -34,63 +30,61 @@ class Pokemon():
 
 pokemon_list = []
 
-
-# Uppgift 1
+TableCapacity = 500
 
 class Node:
     def __init__(self, key="", data=None):
-        """key: nyckeln som anvands vid hashningen
-        data: det objekt som ska hashas in"""
         self.key = key
         self.data = data
-
+        self.next = None
 
 class Hashtable:
-
     def __init__(self):
-        """size: hashtabellens storlek"""
-        self.dictionary = {}
+        self.capacity = TableCapacity
         self.size = 0
+        self.box = [None] * self.capacity
+
+    def hash(self, key):
+        sum = 0
+        for indx, c in enumerate(key):
+    #idx, c lets us iterate over the index and value
+    # of an item in a list by using a basic for loop
+    # enumerate makes key instantly iterable,
+    # enumerate() returns a tuple containing a count (from start which defaults to 0)
+    # and the values obtained from iterating over iterable
+            sum += (indx + len(key)) ** ord(c) # The ord() method takes a single parameter c,
+                                            # where c is character string of length 1
+                                           # and and returns an integer representing the Unicode code point of the character.
+            sum = sum % self.capacity
+        return sum
 
     def store(self, key, data):
-        """key: nyckeln
-           data: objektet som ska lagras
-           Stoppar in "data" med nyckeln "key" i tabellen."""
-        self.dictionary[key] = data
+        self.size += 1
+        index = self.hash(key) #hashar key
+        node = self.box[index]
+
+        if node is None: #Fall 1, ingen node finns, skapar en nod
+            self.box[index] = Node(key, data)
+            return
+
+        OldNode = node
+        while node is not None: #Fall 2 finns en nod på platsen
+            OldNode = node
+            node = node.next
+        OldNode.next = Node(key, data) #Blir vår nya Nod
 
     def search(self, key):
-        """key: nyckeln
-           Hamtar det objekt som finns lagrat med nyckeln "key" och returnerar det.
-           Om "key" inte finns ska vi få en Exception, KeyError """
-        try:
-            print("Data: ", self.dictionary[key])
-            return key
-        except KeyError:
-                print("Wrong key")
+        index = self.hash(key) #hashar key
+        node = self.box[index]
+
+        while node is not None and node.key != key:
+            node = node.next
+        if node is None: #nått slutet av listan eller så fanns det ingen nod till att börja med
+            return None
+        else:
+            return node.data #annars node.key = vad vi söker efter och vi får tillbaks data
 
 
-def hashfunction(key):
-    """key: nyckeln
-    Beräknar hashfunktionen för key"""
-    result = 0
-    for c in key:
-        result = result * 15 + ord(c)  # The ord() method takes a single parameter c,
-        # where c is character string of length 1
-        # and and returns an integer representing the Unicode code point of the character.
-    print(result%len(key))
-    return result % len(key)
-"""
-class DictHash:
-    def __init__(self):
-        self.dictionary = {}
-    def store(self, nyckel, data):
-        self.dictionary[nyckel] = data
-    def search(self, nyckel):
-        try:
-            print("Data: ", self.dictionary[nyckel])
-        except KeyError:
-            print("Wrong key")
-"""
 q = Hashtable()
 
 def main():
@@ -103,4 +97,10 @@ def main():
 
 main()
 
-x = q.search("Bulbasaur")
+
+try:
+    print(str(q.search("Bulbasaur")))
+    print(str(q.search("Charmander")))
+except KeyError:
+    print("Error...")
+    
