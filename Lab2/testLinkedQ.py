@@ -1,5 +1,5 @@
 import unittest
-from linkedQFile_1 import LinkedQ
+from Lab2.linkedQFile_1 import LinkedQ
 
 class TestQueue(unittest.TestCase):
 

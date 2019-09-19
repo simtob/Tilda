@@ -1,8 +1,8 @@
 
 import unittest
 
-from arrayQFile_1 import ArrayQ
-from linkedQFile import LinkedQ
+from JUNK.arrayQFile_1 import ArrayQ
+from JUNK.linkedQFile import LinkedQ
 
 if __name__ == "__main__":
     class Empty(Exception):

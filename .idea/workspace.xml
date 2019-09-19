@@ -3,7 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/Lab3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab7testare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7testare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrayQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/arrayQFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrayQFile_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/arrayQFile_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup_labb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/backup_labb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engelska.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/engelska.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtesttt.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/hashtesttt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/lab1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/lab2.1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/lab2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/linkedQFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedQFile_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/linkedQFile_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testLinkedQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/testLinkedQ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/word3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/övning1.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +45,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
       <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\JUNK" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab2" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab3" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
@@ -50,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lab7testare">
+  <component name="RunManager" selected="Python.Övning4">
     <configuration name="Lab7testare" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,27 +131,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab7a" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tilda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab7a.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="lab7testing1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,13 +152,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Övning4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/Övning4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Övning4" />
         <item itemvalue="Python.Lab7testare" />
         <item itemvalue="Python.hashtest (1)" />
         <item itemvalue="Python.lab7testing1" />
         <item itemvalue="Python.TestLab7 (1)" />
-        <item itemvalue="Python.lab7a" />
       </list>
     </recent_temporary>
   </component>
@@ -351,7 +368,13 @@
       <option name="presentableId" value="LOCAL−00029" />
       <updated>1568810515145</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL−00030" summary="labb3">
+      <created>1568811398806</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1568811398806</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +399,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/lab1.py</url>
+          <url>file://$PROJECT_DIR$/Lab1/lab1.py</url>
           <line>54</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -384,11 +407,6 @@
           <url>file://$PROJECT_DIR$/TestLab7.py</url>
           <line>79</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Lab7testare.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/hashtest (1).py</url>

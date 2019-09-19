@@ -1,4 +1,4 @@
-from arrayQFile import ArrayQ
+from Lab2.arrayQFile import ArrayQ
 
 q = ArrayQ()
 q.enqueue(1)

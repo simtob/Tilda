@@ -51,19 +51,19 @@ class Hashtable:
     def __init__(self, size):
         """size: hashtabellens storlek"""
         self.size = size
-        self.mytabell = [0] * size * 2
+        self.mytabell = [0] * size * 2 #skapar vår tabell, som är tom från början med nollor
 
     def store(self, key, data):
         """key: nyckeln
            data: objektet som ska lagras
            Stoppar in "data" med nyckeln "key" i tabellen."""
 
-        index = hashfunction(self, key) #key får ett index
+        index = hashfunction(self, key) #key får här ett index, efter hashning
         if self.mytabell[index] is 0: #fall nummer ett, när tabellen är tom
-            self.mytabell[index] = Node(key, data) #skapar ny nod
+            self.mytabell[index] = Node(key, data) #skapar en ny nod med nyckel och data på index
 
-        elif self.mytabell[index].next is None: #Fall nummer två
-            self.mytabell[index].next = Node(key,data) #lägger till nod, början på länkade listan
+        elif self.mytabell[index].next is None: #Fall nummer två, Värde finns, men nästa pekar på None.
+            self.mytabell[index].next = Node(key, data) #lägger till nod, början på länkade listan
 
         elif self.mytabell[index].next is not None: #Fall tre, platsen har något och fallet efter har något värde
             start = self.mytabell[index].next
@@ -77,7 +77,7 @@ class Hashtable:
         """key: nyckeln
            Hamtar det objekt som finns lagrat med nyckeln "key" och returnerar det.
            Om "key" inte finns ska vi få en Exception, KeyError """
-        index = hashfunction(self, key)
+        index = hashfunction(self, key) #objekt och key ???
         if self.mytabell[index] == 0:
             raise KeyError
 
@@ -100,10 +100,11 @@ def hashfunction(self, key):
     Beräknar hashfunktionen för key"""
     result = 0
     for c in key:
-        result = result * 15 + ord(c)  # The ord() method takes a single parameter c,
+        result = result * 15 + ord(c)
+        # The ord() method takes a single parameter c,
         # where c is character string of length 1
         # and and returns an integer representing the Unicode code point of the character.
-    return result % self.size*2
+    return result % self.size*2 #efter hashning index blir modulo av tabellens storlek * 2
 
 """
 class DictHash:
@@ -119,7 +120,7 @@ class DictHash:
         except KeyError:
             print("Wrong key")
 """
-q = Hashtable(10000)
+q = Hashtable(1000) #skickar in storlek på vår tabell, tas in som size
 
 def main():
    with open("pokemons.csv", encoding = "utf8") as file:
@@ -131,10 +132,11 @@ def main():
 
 main()
 
+print(str(q.search("Bulbasaur")))
 
+#Vid redovisningen ska du kunna
 
-try:
-    print("Bulbasaur " + str(q.search("Bulbasaur")))
-except KeyError:
-    print("Error...")
-
+#motivera ditt val av hashfunktion, krockhantering och tabellstorlek,
+#skissa hashtabellen,
+#förklara varför hashning ger snabb sökning,
+#berätta hur en unittest-fil är upplagd
