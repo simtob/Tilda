@@ -1,5 +1,5 @@
 # Testar klassen Hashtabell i filen hashfil.py
-from lab7testing1 import Hashtable
+from Lab7.lab7testing1 import Hashtable
 import unittest
 
 

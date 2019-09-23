@@ -1,4 +1,4 @@
-#LABB 7
+#Uppgift 1
 
 import operator
 import csv
@@ -43,84 +43,55 @@ class Node:
         data: det objekt som ska hashas in"""
         self.key = key
         self.data = data
-        self.next = None
 
 
 class Hashtable:
 
-    def __init__(self, size):
+    def __init__(self):
         """size: hashtabellens storlek"""
-        self.size = size
-        self.mytabell = [0] * size * 2 #skapar vår tabell, som är tom från början med nollor
+        self.dictionary = {}
+        self.size = 0
 
     def store(self, key, data):
         """key: nyckeln
            data: objektet som ska lagras
            Stoppar in "data" med nyckeln "key" i tabellen."""
-
-        index = hashfunction(self, key) #key får här ett index, efter hashning
-        if self.mytabell[index] is 0: #fall nummer ett, när tabellen är tom
-            self.mytabell[index] = Node(key, data) #skapar en ny nod med nyckel och data på index
-
-        elif self.mytabell[index].next is None: #Fall nummer två, Värde finns, men nästa pekar på None.
-            self.mytabell[index].next = Node(key, data) #lägger till nod, början på länkade listan
-
-        elif self.mytabell[index].next is not None: #Fall tre, platsen har något och fallet efter har något värde
-            start = self.mytabell[index].next
-            while start.next is not None:
-                start = start.next
-            if start.next is None:
-                start.next = Node(key, data)
-
+        self.dictionary[key] = data
 
     def search(self, key):
         """key: nyckeln
            Hamtar det objekt som finns lagrat med nyckeln "key" och returnerar det.
            Om "key" inte finns ska vi få en Exception, KeyError """
-        index = hashfunction(self, key) #objekt och key ???
-        if self.mytabell[index] == 0:
-            raise KeyError
-
-        elif self.mytabell[index].key == key:
-            return self.mytabell[index].data
-
-        elif self.mytabell[index].next is not None:
-            start = self.mytabell[index].next
-            while start.next is not None:
-                if start.key == key:
-                    return start.data
-                start = start.next
-            if start.key == key:
-                return start.data
-        raise KeyError
+        try:
+            print("Data: ", self.dictionary[key])
+            return key
+        except KeyError:
+                print("Wrong key")
 
 
-def hashfunction(self, key):
+def hashfunction(key):
     """key: nyckeln
     Beräknar hashfunktionen för key"""
     result = 0
     for c in key:
-        result = result * 15 + ord(c)
-        # The ord() method takes a single parameter c,
+        result = result * 15 + ord(c)  # The ord() method takes a single parameter c,
         # where c is character string of length 1
         # and and returns an integer representing the Unicode code point of the character.
-    return result % self.size*2 #efter hashning index blir modulo av tabellens storlek * 2
+    print(result%len(key))
+    return result % len(key)
 
-"""
 class DictHash:
     def __init__(self):
         self.dictionary = {}
-
     def store(self, nyckel, data):
         self.dictionary[nyckel] = data
-
     def search(self, nyckel):
         try:
             print("Data: ", self.dictionary[nyckel])
         except KeyError:
             print("Wrong key")
-"""
-q = Hashtable(1000) #skickar in storlek på vår tabell, tas in som size
+
+q = Hashtable()
 
 def main():
    with open("pokemons.csv", encoding = "utf8") as file:
@@ -132,11 +103,4 @@ def main():
 
 main()
 
-print(str(q.search("Bulbasaur")))
-
-#Vid redovisningen ska du kunna
-
-#motivera ditt val av hashfunktion, krockhantering och tabellstorlek,
-#skissa hashtabellen,
-#förklara varför hashning ger snabb sökning,
-#berätta hur en unittest-fil är upplagd
+x = q.search("Bulbasaur")
