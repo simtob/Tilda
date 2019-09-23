@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lab4test1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/word3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/Lab3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab7testare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7testare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrayQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/arrayQFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrayQFile_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/arrayQFile_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backup_labb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/backup_labb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engelska.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/engelska.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashtesttt.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/hashtesttt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/lab1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/lab2.1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/lab2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/linkedQFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linkedQFile_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/linkedQFile_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testLinkedQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab2/testLinkedQ.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab3/word3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/övning1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab7testing1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab7testing1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,14 +16,23 @@
   <component name="FavoritesManager">
     <favorites_list name="TILDAAAA" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Q0TJ3zwYyvwpKj4lU9pYnPlCQO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -67,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Övning4">
+  <component name="RunManager" selected="Python.lab4test1">
     <configuration name="Lab7testare" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,27 +86,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TestLab7 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tilda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestLab7.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="hashtest (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,6 +99,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hashtest (1).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lab4test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab4test1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.lab4test1" />
         <item itemvalue="Python.Övning4" />
         <item itemvalue="Python.Lab7testare" />
         <item itemvalue="Python.hashtest (1)" />
         <item itemvalue="Python.lab7testing1" />
-        <item itemvalue="Python.TestLab7 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -391,6 +388,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Vet inte va jag gjort, testat lite" />
     <MESSAGE value="labb3" />
     <option name="LAST_COMMIT_MESSAGE" value="labb3" />
