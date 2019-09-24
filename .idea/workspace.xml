@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lab4test1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab3/Lab3use.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4/Lab4upg2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4/bfs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4/engelska.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4/linkedQfilen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab4/word3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab7testing1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab7testing1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUNK/hashtesttt.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/hashtesttt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab3/Lab3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/Lab3use.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab7testare.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/Lab7testare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestLab7.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/TestLab7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtest (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/hashtest (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab7a.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/lab7a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab7file.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/lab7file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab7testing1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/lab7testing1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokemons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Lab7/pokemons.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,13 +28,6 @@
   <component name="FavoritesManager">
     <favorites_list name="TILDAAAA" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -32,23 +37,24 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab3" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab7" />
       <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4Upg2" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\JUNK" />
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab2" />
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab3" />
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab3" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
     </key>
   </component>
@@ -64,8 +70,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.lab4test1">
-    <configuration name="Lab7testare" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Lab4upg2">
+    <configuration name="Lab4" type="PythonConfigurationType" factoryName="Python">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,11 +79,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab7testare.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4\Lab4use.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hashtest (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Lab4upg2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,11 +100,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hashtest (1).py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/Lab4upg2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -107,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab4test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Lab4use" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,11 +121,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab4test1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/Lab4use.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -128,7 +134,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab7testing1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bfs (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -136,11 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab7testing1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/bfs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Övning4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="bfs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,11 +163,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/Övning4.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4\bfs_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lab4tube" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/lab4tube.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,13 +199,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lab4test1" />
-        <item itemvalue="Python.Övning4" />
-        <item itemvalue="Python.Lab7testare" />
-        <item itemvalue="Python.hashtest (1)" />
-        <item itemvalue="Python.lab7testing1" />
+        <item itemvalue="Python.Lab4upg2" />
+        <item itemvalue="Python.bfs (1)" />
+        <item itemvalue="Python.bfs" />
+        <item itemvalue="Python.Lab4use" />
+        <item itemvalue="Python.lab4tube" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -388,7 +418,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Vet inte va jag gjort, testat lite" />
     <MESSAGE value="labb3" />
     <option name="LAST_COMMIT_MESSAGE" value="labb3" />
@@ -402,14 +431,19 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/TestLab7.py</url>
+          <url>file://$PROJECT_DIR$/Lab7/TestLab7.py</url>
           <line>79</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/hashtest (1).py</url>
+          <url>file://$PROJECT_DIR$/Lab7/hashtest (1).py</url>
           <line>15</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$APPLICATION_CONFIG_DIR$/Tests/lab4tube.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

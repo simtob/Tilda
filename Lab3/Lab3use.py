@@ -64,7 +64,7 @@ def skriv(p): #skriver inordning, skriver ut först vänsterträdet sedan rottal
         print(p.value)
         skriv(p.right)
 
-
+"""
 svenska = Bintree()  # Skapa ett trädobjekt
 svenska.put("gurka")  # Sortera in "gurka" i trädet
 svenska.put("tomat")
@@ -73,10 +73,10 @@ svenska.put("apelsin")
 svenska.put("broccoli")
 
 if "gurka" in svenska:
-    svenska.write()  # Skriver alla trädobjektets ord i bokstavsordning
-
+    svenska.write() # Skriver alla trädobjektets ord i bokstavsordning
+"""
 #Uppgift 2:
-
+"""
 svenska = Bintree()
 with open("word3.txt", "r", encoding = "utf-8") as svenskfil:
     for rad in svenskfil:
@@ -99,7 +99,7 @@ with open("engelska.txt", "r", encoding = "utf-8") as engelskfil:
                 if ord in svenska:
                     print(ord, end= " ")
                 engelska.put(ord)
-
+"""
 #Balanserat träd -  För varje nod i trädet så är skillnaden i höjden
 # mellan det högra och det vänstra subträdet högst 1
 
