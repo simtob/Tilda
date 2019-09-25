@@ -1,3 +1,5 @@
+#Labb7 Uppgift 1
+
 from Lab3use import Bintree
 
 lista_för_barn = [] #lista för att skriva ut barnen
@@ -19,7 +21,7 @@ def makechildren(start_ordet):
 
             if counter == 1: #när maximalt EN bokstav är missmatchad
                 barn = ordet
-                print("En bokstav missmatched jämfört med vårt startord - " + start_ordet + " <-> " +ordet)
+                print("En bokstav missmatched jämfört med vårt startord - " + start_ordet + " -> " +ordet)
 
                 if barn not in svenska:
                     svenska.put(barn)
@@ -27,7 +29,7 @@ def makechildren(start_ordet):
                     gamla.put(barn)
                     lista_för_barn.append(barn) #för att skriva ut på snyggt sätt alla barnen
 
-    print("Barnen för " + str(start_ordet) + " blir: " + "\n" +str(lista_för_barn))
+    print("Barnen för " + str(start_ordet) + " blir: " + "\n" + str(lista_för_barn))
 
 makechildren(start_ordet="söt")
 
