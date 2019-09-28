@@ -52,7 +52,7 @@ def main():
     q.enqueue(parent_node)  #lägger in vårt sökord som inte har en parent som en nod, i kön
 
     try:
-        while not q.isEmpty():
+        while not q.isEmpty() and start_ordet in svenska:
             nod = q.dequeue()
             makechildren(nod)
             if nod.word == slut_ordet:

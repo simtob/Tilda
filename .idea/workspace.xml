@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/Lab4/testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab4/Lab4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/Lab4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab4/word3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/word3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab4test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab4test1.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/Lab5/Lab3use.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5/Lab5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5/linkedQfilen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab5/word3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/Lab4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/Lab4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab4test1.py" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/lab4test1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JUNK/word3.txt" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,19 +40,20 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab3" />
+    <property name="last_opened_file_path" value="$APPLICATION_CONFIG_DIR$/Tests" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab5" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\JUNK" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab7" />
       <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4" />
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4Upg2" />
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\JUNK" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab5" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab3" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
@@ -59,7 +71,11 @@
       </list>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Python.testing">
+=======
+  <component name="RunManager" selected="Python.Lab5">
+>>>>>>> Stashed changes
     <configuration name="Lab4 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +139,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="bfs (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="Lab5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> Stashed changes
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -131,11 +151,15 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/bfs.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab5/Lab5.py" />
+>>>>>>> Stashed changes
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,7 +189,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> Stashed changes
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -173,11 +201,15 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/testing.py" />
+=======
+      <option name="SCRIPT_NAME" value="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches\Lab5.py" />
+>>>>>>> Stashed changes
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,9 +220,15 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< Updated upstream
         <item itemvalue="Python.testing" />
         <item itemvalue="Python.lab4test1" />
         <item itemvalue="Python.Lab4 (1)" />
+=======
+        <item itemvalue="Python.Lab5" />
+        <item itemvalue="Python.Lab4 (1)" />
+        <item itemvalue="Python.scratch" />
+>>>>>>> Stashed changes
         <item itemvalue="Python.bfs (1)" />
         <item itemvalue="Python.Lab4upg2" />
       </list>
@@ -396,7 +434,13 @@
       <option name="presentableId" value="LOCAL−00031" />
       <updated>1569268210510</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL−00032" summary="labb3">
+      <created>1569435513615</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1569435513615</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

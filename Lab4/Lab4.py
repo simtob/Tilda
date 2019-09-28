@@ -1,5 +1,7 @@
+
 from linkedQfilen import LinkedQ
 from Lab3use import Bintree
+
 
 q = LinkedQ()
 #Hämta alla ord från filen och stoppa in i binärträd, sen när du genererar ord för de här tre ord bokstävena,
@@ -51,4 +53,3 @@ def main():
 
 
 main()
-
