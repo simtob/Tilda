@@ -24,7 +24,6 @@ def lasafilen(dencoolafilen):
 
     with open(dencoolafilen, encoding="utf8") as track_file:
         allarader = track_file.readlines()
-
         for rader in allarader:
             saken = rader.strip().split("<SEP>")
             okjektlista.append(Enfinlat(saken[0], saken[1], saken[2], saken[3]))

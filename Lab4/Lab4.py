@@ -33,9 +33,6 @@ def makechildren(start_ordet, q, svenska, gamla):
                     gamla.put(barn_str)
                     q.enqueue(barn_str)
 
-
-
-
 def main():
     start_ordet = str(input("ange startord: "))
     slut_ordet = str(input("ange slutord: "))
