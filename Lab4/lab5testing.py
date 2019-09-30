@@ -55,7 +55,7 @@ def main():
         while not q.isEmpty() and start_ordet in svenska:
             nod = q.dequeue()
             makechildren(nod)
-            if nod.word == slut_ordet:
+            if nod.ordet == slut_ordet:
                 print("\n" + "Väg existerar, vägen från", start_ordet, "till", slut_ordet, "är:")
                 nod.writechain(nod)  # Skriver ut kedjan till slutord
                 raise SolutionFound(nod) #stoppar loopen när nod har hittats

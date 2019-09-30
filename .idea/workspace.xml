@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab4/lab5testing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6.1/lab6.1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6.1/unique_tracks.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab6.1/hallo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab4/lab5testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab4/lab5testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab5/Lab5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5/Lab5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab6.1/lab6.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab6.1/lab6.1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="lab4test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="hallo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,11 +118,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab6.1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab4test1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab6.1/hallo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -196,10 +197,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.lab6.1" />
-        <item itemvalue="Python.lab5testing" />
+        <item itemvalue="Python.hallo" />
         <item itemvalue="Python.Lab5" />
+        <item itemvalue="Python.lab5testing" />
         <item itemvalue="Python.testing" />
-        <item itemvalue="Python.lab4test1" />
       </list>
     </recent_temporary>
   </component>
@@ -409,7 +410,13 @@
       <option name="presentableId" value="LOCAL−00032" />
       <updated>1569506823819</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL−00033" summary="labb3">
+      <created>1569849278706</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1569849278706</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
