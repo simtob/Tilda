@@ -26,8 +26,9 @@ def lasafilen(dencoolafilen):
         allarader = track_file.readlines()
         for rader in allarader:
             saken = rader.strip().split("<SEP>")
-            okjektlista.append(Enfinlat(saken[0], saken[1], saken[2], saken[3]))
-            objektdictianry[saken[2]] = okjektlista[len(okjektlista)-1]
+            song = Enfinlat(saken[0], saken[1], saken[2], saken[3])
+            okjektlista.append(song)
+            objektdictianry[song.artistensnamn] = song
 
     return okjektlista, objektdictianry
 
@@ -54,6 +55,9 @@ def main():
 
     linjtid = timeit.timeit(stmt = lambda: linsok(lista, testartist), number = 10)
     print("Linjärsökningen tog", round(linjtid, 4) , "sekunder")
+
+    dicttid = timeit.timeit(stmt=lambda: dicten[testartist], number=10)
+    print("Dictsökningen tog", round(dicttid, 10), "sekunder")
 
 
 
