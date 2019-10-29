@@ -117,19 +117,19 @@ def main():
     mergesorttimer = timeit.timeit(stmt=lambda: mergesort(mindreLista), number=10)
     print("Mergesort tog", round(mergesorttimer, 4), "sekunder")
 
-    bubbletimer = timeit.timeit(stmt=lambda: bubblesort(mindreLista), number=10)
+    bubbletimer = timeit.timeit(stmt=lambda: bubblesort(mindreLista), number =10)
     print("Bubblesortering tog", round(bubbletimer, 4), "sekunder")
 
-    #linjtid = timeit.timeit(stmt = lambda: linsok(mindreLista, testartist), number = 10)
-    #print("Linjärsökningen tog", round(linjtid, 4), "sekunder")
+    linjtid = timeit.timeit(stmt = lambda: linsok(mindreLista, testartist), number = 10)
+    print("Linjärsökningen tog", round(linjtid, 4), "sekunder")
 
-    #dicttime = timeit.timeit(stmt = lambda: obj_dict[testartist], number = 10)
-    #print("Hashsökning tog", round(dicttime, 4) , "sekunder")
+    dicttime = timeit.timeit(stmt = lambda: obj_dict[testartist], number = 10)
+    print("Hashsökning tog", round(dicttime, 4) , "sekunder")
 
     #Sorterar med hjälp av inbyggd funktion
-    #sorted_list = (sorted(storLista, key=lambda item: item.artistname))
-    #bintime = timeit.timeit(stmt = lambda:  binsearch(sorted_list, testartist) , number = 10)
-    #print("Binärsökning i sorterad lista tog", round(bintime, 4) , "sekunder")
+    sorted_list = (sorted(storLista, key=lambda item: item.artistname))
+    bintime = timeit.timeit(stmt = lambda:  binsearch(sorted_list, testartist) , number = 10)
+    print("Binärsökning i sorterad lista tog", round(bintime, 4) , "sekunder")
 
 """
 
