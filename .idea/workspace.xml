@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab8/Formelkoll_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab8/Lab8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab8/linkedQFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab8/numbers" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab8/test_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab8/test_output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab8/Lab8Test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/Formelkoll_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/test_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/test_output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5/Lab5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab5/Lab5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab6/Lab6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab6/Lab6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab8/Lab8.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab8/Labboration8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab8/linkedQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab8/linkedQFile.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,24 +40,24 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab9" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab8" />
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab9" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab6" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab7" />
-      <recent name="C:\Users\SimonToblad\.PyCharmCE2019.2\config\scratches" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab9" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab8" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab6" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab3" />
       <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab4" />
-      <recent name="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,49 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lab8">
-    <configuration name="Formelkoll_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tilda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab8/Formelkoll_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Lab4 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tilda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab4/Lab4.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in Lab8Test.py">
     <configuration name="Lab4" type="PythonConfigurationType" factoryName="Python">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,28 +94,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Lab5" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Tilda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab5" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab5/Lab5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Lab8" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Labboration8" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -170,7 +106,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab8/Lab8.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lab8/Labboration8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,34 +115,97 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for Lab8Test.Test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\SimonToblad\Documents\GitHub\TILDAAAA\Lab8\Lab8.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Lab8Test.Test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Lab8Test.Test.testMolekylochAtom" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Lab8Test.Test.testMolekylochAtom&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Lab8Test.Test.testa" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Lab8Test.Test.testa&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Lab8.Lab8Test.Test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Lab8.Lab8Test.Test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Lab8.Lab8Test.Test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Lab8.Lab8Test.Test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in Lab8Test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Tilda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lab8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Lab8/Lab8Test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Lab8" />
-        <item itemvalue="Python.Formelkoll_test" />
-        <item itemvalue="Python.scratch" />
-        <item itemvalue="Python.Lab5" />
-        <item itemvalue="Python.Lab4 (1)" />
+        <item itemvalue="Python tests.Unittests in Lab8Test.py" />
+        <item itemvalue="Python tests.Unittests for Lab8Test.Test.testa" />
+        <item itemvalue="Python.Labboration8" />
+        <item itemvalue="Python tests.Unittests for Lab8Test.Test" />
+        <item itemvalue="Python tests.Unittests for Lab8Test.Test.testMolekylochAtom" />
       </list>
     </recent_temporary>
   </component>
@@ -422,7 +421,13 @@
       <option name="presentableId" value="LOCAL−00033" />
       <updated>1569849278706</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL−00034" summary="labb3">
+      <created>1572339365520</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1572339365520</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

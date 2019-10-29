@@ -4,21 +4,23 @@ import sys
 
 q = LinkedQ()
 
-
 class Syntaxfel(Exception):
     pass
 
-def storemol(mol):
+def storemol(mol): #Lagrar molekyl
     for char in mol:
         q.enqueue(char)
     return q
 
-def readmol():
+def readmol(): #Läser molekyl
     readatom()
     if q.peek() == '':
         q.dequeue()
     else:
         readNum()
+    if not q.isEmpty():
+        raise Syntaxfel("Atomen för lång")
+
 
 
 def readatom():
@@ -44,36 +46,36 @@ def readLitenbokstav():
 
 
 def readNum():
-    num = ''
+    num = ""
     if q.isEmpty():
         return
+
     while not q.isEmpty():
-        #print(q.peek(), "dequeueas som num")
         if q.peek() == None:
             pass
         elif q.peek().isdigit():
             num += q.dequeue()
         else:
-            raise Syntaxfel("För lång atom: " + q.peek())
-    if int(num) >= 2:
-        return
+            break
+
+    if int(num) < 2:
+        raise Syntaxfel("För litet tal:" + num)
     else:
-        raise Syntaxfel("För litet tal: " + num)
+        return
 
 
-def checksyntax(mol):
-    q = storemol(mol)
+def syntaxcontrol(mol):
+    storemol(mol)
     try:
         readmol()
-        return 'Följer syntaxen!'
+        return 'Syntaxen stämmer!'
     except Syntaxfel as error:
         return str(error)
 
-
 def main():
-    mol = input("skriv en mol: ")
-    resultat = checksyntax(mol)
-    print(resultat)
+    mol = input("Molekyl: ")
+    result = syntaxcontrol(mol)
+    print(result)
 
 
 if __name__ == '__main__':

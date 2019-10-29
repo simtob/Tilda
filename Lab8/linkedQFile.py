@@ -37,9 +37,6 @@ class LinkedQ():
         return (self._size)
 
     def peek(self):
-        """Returnerar en kopia av nästa item i kön, utan att ta bort den.
-        Nästa item är samma värde som skulle ha blivit returnerat av dequeuen operationen.
-        Ett item kan inte bli dequeued från en tom kö."""
         if not self.isEmpty():
             return self._first.value
         else:
