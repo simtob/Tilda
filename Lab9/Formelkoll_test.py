@@ -39,7 +39,7 @@ def get_subject_name():
 
 
 def test_subject(subject_name):
-    test_files_dir = "Lab8"
+    test_files_dir = "Labboration9"
     if len(argv) > 2:
         test_files_dir = argv[2]
 
@@ -81,7 +81,7 @@ def test_subject(subject_name):
     test_output = test_output[:-1]
     test_output = test_output.replace("\\n", "\n")
     test_output = test_output.replace("\\r", "")
-    test_output = test_output.replace("\\xe4", "ä")
+    test_output = test_output.replace("\\xc4", "ä")
     test_output = test_output.replace("\\xf6", "ö")
     test_output = test_output.split("\n")
     if str(errors, encoding="utf-8") != "":
