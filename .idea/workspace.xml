@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab9/Labboration9.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab9/linkedQFile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab9/scratch.py" afterDir="false" />
+    <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="labb9">
+      <change afterPath="$PROJECT_DIR$/Lab8/correct_indatasample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/correct_indatasample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/correct_outdatasample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/incorrect_indatasample" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lab9/incorrect_outdatasample" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab8/Labboration8.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab8/Labboration8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab9/Formelkoll_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab9/Formelkoll_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab8exp/2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab8exp/labbb8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab8exp/testing8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab9/Labboration9.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab9/Labboration9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab9/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab9/scratch.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Formelkoll_test">
+  <component name="RunManager" selected="Python.Labboration9">
     <configuration name="ADifferentProblem" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -227,8 +232,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Formelkoll_test" />
         <item itemvalue="Python.Labboration9" />
+        <item itemvalue="Python.Formelkoll_test" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.Labboration8" />
         <item itemvalue="Python.ADifferentProblem" />
@@ -465,7 +470,13 @@
       <option name="presentableId" value="LOCAL−00036" />
       <updated>1572356865947</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL−00037" summary="labb9">
+      <created>1572609766065</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1572609766065</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -485,7 +496,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Vet inte va jag gjort, testat lite" />
     <MESSAGE value="labb3" />
-    <option name="LAST_COMMIT_MESSAGE" value="labb3" />
+    <MESSAGE value="labb9" />
+    <option name="LAST_COMMIT_MESSAGE" value="labb9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
