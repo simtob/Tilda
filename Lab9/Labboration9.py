@@ -1,5 +1,5 @@
 from linkedQFile import *
-import sys
+from sys import stdin
 import string
 """
 <formel>::= <mol> \n
@@ -14,11 +14,11 @@ q = LinkedQ()
 class Syntaxfel(Exception):
     pass
 
-ATOMER = set(["H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr" \
+ATOMER = ["H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr" \
 "Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd", \
 "In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf", \
 "Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm", \
-"Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Fl","Lv"])
+"Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Fl","Lv"]
 
 
 def readformel(q):
@@ -44,7 +44,7 @@ def readgroup(q):
             raise Syntaxfel("Saknad högerparentes vid radslutet ")
 
     elif q.peek() == ")" or q.peek().isdigit():
-        raise Syntaxfel("Felaktig gruppstart vid radslutet")
+        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
 
 def readatom(q):
@@ -79,7 +79,7 @@ def readatom(q):
     elif q.peek().islower():
         raise Syntaxfel("Saknad stor bokstav vid radslutet ")
     elif q.peek().isdigit():
-        raise Syntaxfel("Felaktig gruppstart vid radlutet ")
+        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
 
 def readnum(q):
@@ -94,6 +94,7 @@ def readnum(q):
                         number2 = q.dequeue()
                         number = number + number2
                         if not q.peek():
+                            print("APA")
                             break
             if int(number) >= 2:
                 return
@@ -109,9 +110,11 @@ def printQ(q):
 	return items
 
 
+
+
 def main():
-    datafile = open("correct_indatasample","r") #Lätt att ändra för att testa indata från fil
-    for line in datafile:
+    #stdin = open("Formellkoll_test") #Lätt att ändra för att testa indata från fil
+    for line in stdin:
         line = line.strip()
         if line == "#":
             break
@@ -122,10 +125,12 @@ def main():
             if not q.peek():
                 raise Syntaxfel("Felaktig gruppstart vid radslutet ")
             readformel(q)
-            print("Formeln är syntaktiskt korrekt")
+            print("Formeln är syntaktiskt korrekt ")
         except Syntaxfel as felet:
             rest = printQ(q)
             print(str(felet) + rest)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    file_name1 = "correct_sample.in"
+    file_name2 = "incorrect_sample.in"
     main()
