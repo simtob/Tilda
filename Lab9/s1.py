@@ -71,80 +71,79 @@ class Syntaxfel(Exception):
     pass
 
 def storemol(themol): #Lagrar molekyl i en kö
-    for everychar in themol:
+    for everychar in themol: #varje karaktär i molykylen läggs in i kön
         q.enqueue(everychar)
     return q
 
 
 
 def readmol():
-    readgroup()
-    if q.isEmpty():
-        return
-    elif q.peek() == ")":
+    readgroup() #Läser gruppen
+    if q.peek() == ")":
         if len(pairing) < 1:
             raise Syntaxfel("Felaktig gruppstart vid radslutet ")
-        return
+        else:
+            return
     elif q.peek():
         if q.peek() == "(" or q.peek().isalpha():
             readmol()
+    elif q.isEmpty():
+        return
     else:
         readmol()
 
 def readgroup():
 
-    if q.isEmpty():
+    if q.isEmpty(): #Om kön är tom, raise syntaxfel
         raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
     if q.peek().isalpha(): #kollar om det är bokstav
-        readatom()
-        if q.peek() is None:
+        readatom() #Läser atomen
+        if q.peek() is None: #Om peeken är inget
             return
 
-        if q.peek().isdigit():
-            readnum()
+        if q.peek().isdigit(): #Om nästa tecken är nummer
+            readnum() #Anropa funktionen där numret läses
         return
 
-    elif q.peek() == "(":
-        pairing.append(q.dequeue())
-        readmol()
-        if q.peek() != ")":
+    elif q.peek() == "(": #Om en grupp blrjar med (, ok! Läggs in i kön
+        pairing.append(q.dequeue()) #Läggs in i kön gruppvis
+        readmol() #Anropar funktion där molykylen läses
+        if q.peek() != ")": #Eftersom en grupp måste ha () blir det fel om det inte slutar på)
             raise Syntaxfel("Saknad högerparentes vid radslutet ")
-        if q.isEmpty() or q.peek().isdigit():
+        if q.isEmpty() or q.peek().isdigit(): #Kan ej börja med tal, blir raise. Och kan ej vara tom
             raise Syntaxfel("Saknad siffra vid radslutet ")
 
         else:
-            pairing.pop()
-            q.dequeue()
-            if q.isEmpty():
+            pairing.pop() #Ifall inget funkar tas pairingen bort
+            q.dequeue() #Bort från kön
+            if q.isEmpty(): #Eller om kön är tom blir det ju fel.
                 raise Syntaxfel("Saknad siffra vid radslutet ")
-        readnum()
-    else:
+        readnum() #Numret läses då när grupp inte finns
+    else: #Annars blir det fel gruppstart
         raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
 
 def readatom():
-    """<atom>  ::= <LETTER> | <LETTER><letter>"""
 
     if q.peek().isupper():
-        x = q.dequeue()
-    # print(x, "readAtom stor bokstav")
+        first = q.dequeue()
+
     else:
         raise Syntaxfel("Saknad stor bokstav vid radslutet ")
 
     if q.peek() != None:
         if q.peek().islower():
-            x = x + q.dequeue()
-        # print("Atomen är", x)
+            first = first + q.dequeue()
 
-    if x in ALLAATOMER:
+
+    if first in ALLAATOMER:
         return
     else:
         raise Syntaxfel("Okänd atom vid radslutet ")
 
 
 def readnum():
-	"""<num>   ::= 2 | 3 | 4 | ..."""
 
 	if q.peek().isdigit():
 		if q.peek() == "0":
@@ -158,7 +157,6 @@ def readnum():
 			else:
 				break
 		if int(num) >= 2:
-			#print(num)
 			return
 		else:
 			raise Syntaxfel("För litet tal vid radslutet ")
@@ -172,27 +170,24 @@ def printQ():
 	return items
 
 def readformel(themol):
-    """<formel>::= <mol> \n"""
     q = storemol(themol)
     try:
         readmol()
         if len(pairing) > 0:
             raise Syntaxfel('Saknad högerparentes vid radslutet ')
-        return 'Formeln är syntaktiskt korrekt'
+        else:
+            return "Formeln är syntaktiskt korrekt"
     except Syntaxfel as error:
         return str(error) + printQ()
-
-
-
 
 def main():
         themol = sys.stdin.readline().strip()
         if themol != "#":
-            resultat = readformel(themol)
+            result = readformel(themol)
             del pairing[:]
             printQ()
             q.empty()
-            print(resultat)
+            print(result)
             main()
 
 if __name__ == '__main__':
