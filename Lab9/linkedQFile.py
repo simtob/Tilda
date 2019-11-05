@@ -36,7 +36,7 @@ class LinkedQ():
     def size(self):
         return (self._size)
 
-    def empty(self):
+    def clear(self):
         self._first = None
         self._last = None
 

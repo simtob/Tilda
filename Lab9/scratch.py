@@ -1,155 +1,157 @@
-from LinkedQFile import LinkedQ
-import unittest
-from unittest_9 import *
+from linkedQFile import *
+import sys
+import string
 
-"""
-Syntax enligt BNF:
-<formel>::= <mol>
-<mol>   ::= <group> | <group><mol>
-<group> ::= <atom> |<atom><num> | (<mol>) <num>
-<atom>  ::= <LETTER> | <LETTER><letter>
-<LETTER>::= A | B | C | ... | Z
-<letter>::= a | b | c | ... | z
-<num>   ::= 2 | 3 | 4 | ...
-"""
+q = LinkedQ()
+
+par = []
+
+ATOMER = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca',
+          'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr',
+          'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba',
+          'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W',
+          'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa', 'U',
+          'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt', 'Ds',
+          'Rg', 'Cn', 'Fl', 'Lv']
 
 
-class SyntaxError(Exception):  # Eget exceptionfel vi lägger till för syntaxen
+class Syntaxfel(Exception):
     pass
 
 
-def readFormel(q):  # Bearbetar kö och kollar om den följer <formel>
-    while q.peek() != ".":
-        readMol(q)
-
-
-def readMol(q):  # Input: kö. Output: T/F. Kollar syntaxen för en Molekyl enligt BNF.
-    readGroup(q)
-    if readUpper(q.peek()) or q.peek() == "(":
-        readMol(q)
-
-
-def readGroup(q):  # Tar in kö och kollar om den följer syntax för <group> enl. BNF.
-    if q.peek() == "(":
-        q.dequeue()
-        readMol(q)
-        if q.peek() == ")":
-            q.dequeue()
-            readNum(q)
-        else:
-            raise SyntaxError("Saknad högerparentes vid radslutet " + printQ(q))
-    elif readUpper(q.peek()) or readLower(q.peek()):
-        readAtom(q)
-    else:
-        raise SyntaxError("Felaktig gruppstart vid radslutet " + printQ(q))
-
-
-def readAtom(q):  # Tar in kö och kollar om den följer syntax för <atom> enl. BNF.
-    first = q.dequeue()
-    if readUpper(first):
-        if readLower(q.peek()):
-            second = q.dequeue()
-            atom = str(first) + str(second)
-            if atom not in atomList:
-                raise SyntaxError("Okänd atom vid radslutet " + printQ(q))
-        else:
-            if first not in atomList:
-                raise SyntaxError("Okänd atom vid radslutet " + printQ(q))
-        if q.peek().isdigit():
-            readNum(q)
-    else:
-        raise SyntaxError("Saknad stor bokstav vid radslutet " + first + printQ(q))
-
-
-def readUpper(x):  # Input: kö. Output: T/F. Om första elementet i kön är en stor bokstav: True, annars syntaxfel.
-    return x.isupper()
-
-
-def readLower(x):  # Input: kö. Output: T/F. Om första elementet i kön är en liten bokstav: True, annars syntaxfel.
-    return x.islower()
-
-
-def readNum(q):  # Input: kö. Output: T/F. Kollar om den följer syntax för <Num> enl. BNF.
-    if q.peek().isdigit():
-        x = q.dequeue()
-        if int(x) == 0:
-            raise SyntaxError("För litet tal vid radslutet " + printQ(q))
-        elif x.isdigit():
-            while q.peek().isdigit():
-                nextX = q.dequeue()
-                x += nextX
-            if int(x) < 2:
-                raise SyntaxError("För litet tal vid radslutet " + printQ(q))
-        else:
-            raise SyntaxError("Saknad siffra vid radslutet " + x + printQ(q))
-    else:
-        raise SyntaxError("Saknad siffra vid radslutet " + printQ(q))
-
-
-def checkSyntax(mol):
-    q = storeMol(mol)
-    try:
-        readFormel(q)
-        return "Formeln är syntaktiskt korrekt"
-    except SyntaxError as error:
-        return str(error)
-
-
-def storeMol(mol):
-    q = LinkedQ()
-    for i in list(mol):
-        q.enqueue(i)
-    q.enqueue(".")
+def storeMolekyl(molekyl):
+    """Lägger in strängen i kön"""
+    for symbol in molekyl:
+        q.enqueue(symbol)
     return q
 
 
-def printQ(q):
+def readMolekyl():
+    """<mol>   ::= <group> | <group><mol>"""
+    """readmol() anropar readgroup() och sedan eventuellt sej själv
+    (men inte om inmatningen är slut eller om den just kommit tillbaka från ett parentesuttryck)"""
+
+    readGrupp()
+    if q.isEmpty():
+        return
+    elif q.peek() == ")":
+        if len(par) < 1:
+            raise Syntaxfel("Felaktig gruppstart vid radslutet ")
+        return
+    else:
+        readMolekyl()
+
+
+def readGrupp():
+    """<group> ::= <atom> |<atom><num> | (<mol>) <num>"""
+    """readgroup() anropar antingen readatom() eller läser en parentes och anropar readmol()"""
+
+    if q.isEmpty():
+        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
+    if q.peek().isdigit():
+        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
+
+    if q.peek().isalpha():
+        # print("Kallar på readAtom i readGrupp")
+        readAtom()
+        if q.peek() is None:
+            return
+        if q.peek().isdigit():
+            readNum()
+        return
+
+    elif q.peek() == "(":
+        par.append(q.dequeue())
+        readMolekyl()
+
+        if q.peek() != ")":
+            raise Syntaxfel("Saknad högerparentes vid radslutet ")
+
+        if q.isEmpty():
+            raise Syntaxfel("Saknad siffra vid radslutet ")
+        else:
+            par.pop()
+            q.dequeue()
+            if q.isEmpty():
+                raise Syntaxfel("Saknad siffra vid radslutet ")
+            readNum()
+    else:
+        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
+
+
+def readAtom():
+    """<atom>  ::= <LETTER> | <LETTER><letter>"""
+
+    if q.peek().isupper():
+        x = q.dequeue()
+    # print(x, "readAtom stor bokstav")
+    else:
+        raise Syntaxfel("Saknad stor bokstav vid radslutet ")
+
+    if q.peek() != None:
+        if q.peek().islower():
+            x = x + q.dequeue()
+        # print("Atomen är", x)
+
+    if x in ATOMER:
+        return
+    else:
+        raise Syntaxfel("Okänd atom vid radslutet ")
+
+
+def readNum():
+    """<num>   ::= 2 | 3 | 4 | ..."""
+
+    if q.peek().isdigit():
+        if q.peek() == "0":
+            q.dequeue()
+            raise Syntaxfel("För litet tal vid radslutet ")
+
+        num = ""
+        while q.peek() != None:
+            if q.peek().isdigit():
+                num = num + q.dequeue()
+            else:
+                break
+        if int(num) >= 2:
+            # print(num)
+            return
+        else:
+            raise Syntaxfel("För litet tal vid radslutet ")
+    else:
+        raise Syntaxfel("Saknad siffra vid radslutet ")
+
+
+def printQ():
     rest = ""
-    while not q.peek() == ".":
-        word = q.dequeue()
-        rest += word
+    while not q.isEmpty():
+        rest = rest + q.dequeue()
     return rest
 
 
-atomList = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K',
-            'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb',
-            'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs',
-            'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta',
-            'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa',
-            'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt',
-            'Ds', 'Rg', 'Cn', 'Fl', 'Lv']
+def readFormel(molekyl):
+    """<formel>::= <mol> \n"""
+    q = storeMolekyl(molekyl)
+    try:
+        readMolekyl()
+        if len(par) > 0:
+            raise Syntaxfel('Saknad högerparentes vid radslutet ')
+        return 'Formeln är syntaktiskt korrekt'
+    except Syntaxfel as error:
+        return str(error) + printQ()
 
 
-def testSyntax(filename):
-    with open(filename, "r", encoding="utf-8") as sample:
-        for line in sample:
-            mol = line.strip()
-            if mol != "#":
-                result = checkSyntax(mol)
-            return result
+def main():
+    # kodupprepning på alla raise Syntaxfel
+    molekyl = sys.stdin.readline().strip()
+    if molekyl != "#":
+        resultat = readFormel(molekyl)
+        del par[:]
+        printQ()
+        q.clear()
+        print(resultat)
+        main()
 
 
-def printFile(filename):
-    with open(filename, "r", encoding="utf-8") as sample:
-        for line in sample:
-            lines = line.strip()
-            return lines
-
-
-def main():  # Mainprogrammet som ger användaren möjlighet till input, printar resultatet av syntaxkollen.
-    """
-    with open("correct_sample_in.txt", "r", encoding="utf-8") as sample:
-        for line in sample:
-            mol = line.strip()
-            if mol != "#":
-                result = checkSyntax(mol)
-                print(result)
-    """
-
-    mol = input("ge mig en molekyl: ")
-    resultat = checkSyntax(mol)
-    print(resultat)
-
-
-if __name__ == "__main__":
-    unittest.main()
+if __name__ == '__main__':
+    main()
