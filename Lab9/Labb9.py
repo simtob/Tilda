@@ -1,4 +1,5 @@
 import sys
+import re
 
 
 class Node:
@@ -169,7 +170,6 @@ def readnum():
     else:
         raise Syntaxfel("Saknad siffra vid radslutet ")
 
-
 def printQ():
     items = ""
     while not q.isEmpty():
@@ -188,9 +188,8 @@ def readformel(themol):
     except Syntaxfel as error:
         return str(error) + printQ()
 
-
 def main():
-    #stdin = open(file_name1)
+    #sys.stdin = open(f1) #stdin testar input
     for line in sys.stdin:
         mol = line.strip()
         if mol != "#":
@@ -199,8 +198,9 @@ def main():
             printQ()
             q.empty()
             print(res)
-            main()
-
+           # main()
 
 if __name__ == '__main__':
+    f1 = "correct_sample.in"
+    f2 = "incorrect_sample.in"
     main()
