@@ -1,5 +1,4 @@
 import sys
-import string
 
 
 class Node:
@@ -100,7 +99,7 @@ def readmol():
 
 
 def readgroup():
-    if q.isEmpty():  # Om kön är tom, raise syntaxfel
+    if q.isEmpty() or q.peek().isdigit():  # Om kön är tom, raise syntaxfel, inte får börja med nummer
         raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
     if q.peek().isupper() or q.peek().islower():  # kollar om det är bokstav
@@ -112,8 +111,6 @@ def readgroup():
             readnum()  # Anropa funktionen där numret läses
         return
 
-    if q.peek().isdigit():
-        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
 
     elif q.peek() == "(":  # Om en grupp börjar med (, ok! Läggs in i kön
@@ -141,14 +138,14 @@ def readatom():
     else:
         raise Syntaxfel("Saknad stor bokstav vid radslutet ")
 
-    if q.peek() != None:
-        if q.peek().islower():
-            first = first + q.dequeue()
+    if q.peek() is not None and q.peek().islower():
+        first = first + q.dequeue()
 
-    if first in ALLAATOMER:
-        return
-    else:
+    if first not in ALLAATOMER:
         raise Syntaxfel("Okänd atom vid radslutet ")
+    else:
+        return
+
 
 
 def readnum():
@@ -159,7 +156,7 @@ def readnum():
 
         nummer = ""
         while not q.isEmpty():
-            if q.peek() == None:
+            if q.peek() is None:
                 pass
             elif q.peek().isdigit():
                 nummer += q.dequeue()
