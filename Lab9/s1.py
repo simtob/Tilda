@@ -178,10 +178,10 @@ def printQ():
 
 
 def readformel(themol):
-    q = storemol(themol)
+    storemol(themol)
     try:
         readmol()
-        if len(pairing) > 0:
+        if len(pairing) is None:
             raise Syntaxfel('Saknad högerparentes vid radslutet ')
         else:
             return "Formeln är syntaktiskt korrekt"
@@ -190,14 +190,16 @@ def readformel(themol):
 
 
 def main():
-    themol = sys.stdin.readline().strip()
-    if themol != "#":
-        result = readformel(themol)
-        del pairing[:]
-        printQ()
-        q.empty()
-        print(result)
-        main()
+    #stdin = open(file_name1)
+    for line in sys.stdin:
+        mol = line.strip()
+        if mol != "#":
+            res = readformel(mol)
+            pairing.clear()
+            printQ()
+            q.empty()
+            print(res)
+            main()
 
 
 if __name__ == '__main__':
