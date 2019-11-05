@@ -1,6 +1,59 @@
 from linkedQFile import *
 from sys import stdin
 import string
+class Node:
+   def __init__(self, x, next = None):
+      self.value = x
+      self.next = next
+
+class LinkedQ():
+
+    def __init__(self):
+        self._first = None
+        self._last = None  # sign for int
+        self._size = 0
+
+    def isEmpty(self):
+        if self._first == None:
+            return True
+        else:
+            return False
+
+
+    def enqueue(self, x):
+        new = Node(x)
+        if self.isEmpty():
+            self._first = new
+            self._last = new
+        else:
+            self._last.next = new
+        self._last = new
+        self._size += 1
+
+    def dequeue(self):
+        x = self._first.value
+        self._first = self._first.next
+        self._size -= 1
+        return x
+
+    def size(self):
+        return (self._size)
+
+    def restart(self):
+        self._first = None
+        self._last = None
+
+
+    def peek(self):
+        if not self.isEmpty():
+            return self._first.value
+        else:
+            return None
+
+
+
+
+
 """
 <formel>::= <mol> \n
 <mol>   ::= <group> | <group><mol>
@@ -60,13 +113,10 @@ def readgroup():
         raise Syntaxfel("Felaktig gruppstart vid radslutet ")
     if q.peek().isupper() or q.peek().islower(): #kollar om det är bokstav
         readatom()
-        if q.peek().isdigit():
-            readnum()
         if q.peek() is None:
             return
-
-    if q.peek.isdigit():
-        raise ("Felaktig gruppstart vid radslutet ")
+        if q.peek().isdigit():
+            readnum()
 
     elif q.peek() == "(":
         atompair.append(q.dequeue())
@@ -90,43 +140,43 @@ def readgroup():
 def readatom():
     if q.peek().isupper():
         first = q.dequeue()
-        if q.peek():
-            if q.peek().islower():
-                second = q.dequeue()
-                atomen = str(first) + str(second) #q.dequeue är den andra
-                if atomen in atoms:
-                    return
-                else:
-                    raise Syntaxfel("Okänd atom vid radslutet ")
 
-        else:
-            if first not in atoms:
-                raise Syntaxfel("Okänd atom vid radslutet ")
-            if first in atoms:
-                return
     else:
         raise Syntaxfel("Saknad stor bokstav vid radslutet ")
+
+    if q.peek() != None:
+        if q.peek().islower():
+            second = q.dequeue()
+            first = first + second
+
+    if first in atoms:
+        return
+    else:
+        raise Syntaxfel("Okänd atom vid radslutet ")
 
 
 def readnum():
     """<num>   ::= 2 | 3 | 4 | ..."""
     if q.peek().isdigit():
-        number = q.dequeue()
-        if number == "0":
+        if q.peek() == "0":
+            q.dequeue()
             raise Syntaxfel("För litet tal vid radslutet ")
-        if q.peek():
-            if q.peek().isdigit(): #om nästa också e tal
-                while q.peek().isdigit(): #så länge tal
-                        number2 = q.dequeue()
-                        number = number + number2
-                        if not q.peek():
-                            break
-            if int(number) >= 2:
-                return
+        num = ""
+        if q.isEmpty():
+            return
+
+        while not q.isEmpty():
+            if q.peek() == None:
+                pass
+            elif q.peek().isdigit():
+                num += q.dequeue()
             else:
-                raise Syntaxfel("För litet tal vid radslutet ")
-    else:
-        raise Syntaxfel("Okänd atom vid radslutet ")
+                break
+
+        if int(num) < 2:
+            raise Syntaxfel("För litet tal:" + num)
+        else:
+            return
 
 def printQ():
 	items = ""
@@ -136,21 +186,18 @@ def printQ():
 
 
 
-
 def main():
-    #stdin = open("Formellkoll_test") #Lätt att ändra för att testa indata från fil
+    #stdin = open(file_name1)
     for line in stdin:
-        line = line.strip()
-        if line == "#":
-            break
-        try:
-            if not q.peek():
-                raise Syntaxfel("Felaktig gruppstart vid radslutet ")
-            readformel(q)
-            print("Formeln är syntaktiskt korrekt ")
-        except Syntaxfel as error:
-            rester = printQ()
-            print(str(error) + rester)
+        mol = line.strip()
+        if mol != "#":
+            res = readformel(mol)
+            del atompair[:]
+            printQ()
+            q.restart()
+            print(res)
+            main()
+
 
 if __name__ == '__main__':
     file_name1 = "correct_sample.in"

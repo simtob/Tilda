@@ -36,6 +36,10 @@ class LinkedQ():
     def size(self):
         return (self._size)
 
+    def restart(self):
+        self._first = None
+        self._last = None
+
     def peek(self):
         if not self.isEmpty():
             return self._first.value

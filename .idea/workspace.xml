@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="labb9">
-      <change afterPath="$PROJECT_DIR$/Lab9/Formelkoll.py" afterDir="false" />
+    <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab8/linkedQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab8/linkedQFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab9/Labboration9.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab9/Labboration9.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab9/linkedQFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab9/linkedQFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab9/scratch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab9/scratch.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Formelkoll_test (1)">
+  <component name="RunManager" selected="Python.Labboration9">
     <configuration name="Formelkoll_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -226,8 +225,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Formelkoll_test (1)" />
         <item itemvalue="Python.Labboration9" />
+        <item itemvalue="Python.Formelkoll_test (1)" />
         <item itemvalue="Python.Formelkoll_test" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.Labboration8" />
@@ -482,7 +481,13 @@
       <option name="presentableId" value="LOCAL−00039" />
       <updated>1572619092282</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL−00040" summary="labb9">
+      <created>1572948235001</created>
+      <option name="number" value="LOCAL−00040" />
+      <option name="presentableId" value="LOCAL−00040" />
+      <updated>1572948235001</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
