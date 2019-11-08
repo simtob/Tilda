@@ -76,6 +76,16 @@ ALLAATOMER = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 
 class Syntaxfel(Exception):
     pass
 
+def readformel(themol):
+    storemol(themol)
+    try:
+        readmol()
+        if len(pairing) is None:
+            raise Syntaxfel('Saknad högerparentes vid radslutet ')
+        else:
+            return "Formeln är syntaktiskt korrekt"
+    except Syntaxfel as error:
+        return str(error) + printQ()
 
 def storemol(themol):  # Lagrar molekyl i en kö
     for everychar in themol:  # varje karaktär i molykylen läggs in i kön
@@ -177,19 +187,10 @@ def printQ():
     return items
 
 
-def readformel(themol):
-    storemol(themol)
-    try:
-        readmol()
-        if len(pairing) is None:
-            raise Syntaxfel('Saknad högerparentes vid radslutet ')
-        else:
-            return "Formeln är syntaktiskt korrekt"
-    except Syntaxfel as error:
-        return str(error) + printQ()
+
 
 def main():
-    #sys.stdin = open(f1) #stdin testar input
+    sys.stdin = open(f2) #stdin testar input
     for line in sys.stdin:
         mol = line.strip()
         if mol != "#":
@@ -204,3 +205,16 @@ if __name__ == '__main__':
     f1 = "correct_sample.in"
     f2 = "incorrect_sample.in"
     main()
+
+"""
+Visa godkänd kattisinskickning
+Beskriva hur rekursiv medåkning fungerar
+Visa hur dina funktioner speglar den givna syntaxen
+
+Förklara varför man inte måste räkna antalet parenteser
+ #Därför vi inte tar hänsyn till fler påföljande parenteser
+ #Då en grupp omges av ett parentes-par.
+
+Visa ditt unittest-program
+
+"""
