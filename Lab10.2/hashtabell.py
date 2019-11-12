@@ -44,9 +44,9 @@ class Hashtabell:
         while currNode != None:
             if currNode.key == key:
                 return currNode
-            currNode = currNode.next
+            currNode = currNode.nesta
 
-        raise KeyError
+
 
     def put(self, key, value):
         index = self.hashfunction(key)

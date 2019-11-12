@@ -102,7 +102,7 @@ def readmol():
             return mol
     elif q.peek():
         if q.peek() == "(" or q.peek().isupper() or q.peek().islower():
-            readmol()
+            mol.next = readmol()
     elif q.isEmpty():
         return mol
     else:
@@ -189,11 +189,12 @@ def printQ():
     return items
 
 def readvikt(ruta):
-    if ruta.atom == "()":
+    if ruta.atom == "( )":
         if ruta.down != None:
-            x = float(readvikt(ruta.down)) * float(ruta.num)
+            x = float(readvikt(ruta.down)) #float(ruta.num)
     else:
-        x = float(hashadeAtomer.search(ruta.atom).data.vikt) * float(ruta.num)
+        x = float(hashadeAtomer.search(ruta.atom).value.vikt)# * float(ruta.num)
+        #print(ruta.num)
 
     if ruta.next != None:
         y = readvikt(ruta.next)

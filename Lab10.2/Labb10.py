@@ -193,7 +193,7 @@ def readvikt(ruta):
         if ruta.down != None:
             x = float(readvikt(ruta.down)) * float(ruta.num)
     else:
-        x = float(hashadeAtomer.search(ruta.atom).value.vikt) * float(ruta.num)
+        x = float(hashadeAtomer.search(ruta.atom).data.vikt) * float(ruta.num)
 
     if ruta.next != None:
         y = readvikt(ruta.next)
@@ -230,9 +230,9 @@ def main():
         pairing.clear()
         printQ()
         q.empty()
-        main()
+main()
 
-if __name__ == '__main__':
-    f1 = "correct_sample.in"
-    f2 = "incorrect_sample.in"
-    main()
+#if __name__ == '__main__':
+ #   f1 = "correct_sample.in"
+  #  f2 = "incorrect_sample.in"
+   # main()

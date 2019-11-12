@@ -1,6 +1,6 @@
 from molgrafik import *
 
-ruta1 = Ruta(atom="C")
+ruta1 = Ruta(atom="Si")
 ruta2 = Ruta(num=3)
 ruta3 = Ruta(atom="O", num=2)
 ruta4 = Ruta(atom="H")
