@@ -1,42 +1,45 @@
-class HashNode:
-    def __init__(self, key, value, next=None):
-        self.key = key
-        self.value = value
-        self.next = next
+KAPACITET = 500
 
-    def __str__(self):
-        if self.key != None and self.value != None:
-            return "key = " + str(self.key) + " and value = " + str(self.value)
-        else:
-            return None
+
+class Node:  # Själva verket en node datastruktor, som en linkedlist node
+    def __init__(self, key, data):
+        self.key = key
+        self.data = data
+        self.nesta = None
 
 
 class Hashtabell:
-    def __init__(self, elements):
-        self.size = elements * 2 + 3
-        self.slots = [None] * self.size
+    # initisiserar en hash tabell
+    def __init__(self, size):
+        self.size = size
+        self.kapasitet = KAPACITET
+        self.luckor = [None] * self.kapasitet
         self.krockantal = 0
 
-    def hashKey(self, key):
-        """Tagen från föreläsningsanteckningar"""
-        result = 0
-        for i in key:
-            result = result * 32 + ord(i)
-        return result % self.size
+    def store(self, key, data):
+        # steg 1 blir att öka storleken
+        self.size += 1
+        # steg 2 blir att beräkna index av key
+        index = self.hashfunction(key)
 
-    def put(self, key, value):
-        index = self.hashKey(key)
-        if self.slots[index] == None:
-            self.slots[index] = HashNode(key, value)
-        else:
-            self.krockantal += 1
-            krock = self.slots[index]
-            self.slots[index] = HashNode(key, value)
-            self.slots[index].next = krock
+        node = self.luckor[index]  # går till noden
+
+        # om luckan är tom så skapas ny node och retunerar
+        if node is None:
+            self.luckor[index] = Node(key, data)
+            return
+
+        # annars gå igenomen länkade listan på given index, sedan lägg till ny node på slutet av listan
+        tidigare = node
+        while node is not None:
+            tidigare = node
+            node = node.nesta
+
+        tidigare.nesta = Node(key, data)
 
     def search(self, key):
-        index = self.hashKey(key)
-        currNode = self.slots[index]
+        index = self.hashfunction(key)
+        currNode = self.luckor[index]
 
         while currNode != None:
             if currNode.key == key:
@@ -45,20 +48,19 @@ class Hashtabell:
 
         raise KeyError
 
+    def put(self, key, value):
+        index = self.hashfunction(key)
+        if self.luckor[index] == None:
+            self.luckor[index] = Node(key, value)
+        else:
+            self.krockantal += 1
+            krock = self.luckor[index]
+            self.luckor[index] = Node(key, value)
+            self.luckor[index].next = krock
 
-def storeArtist(a):
-    with open("unique_tracks.txt", "r", encoding="ISO-8859-1") as fil:
-        for rad in fil:
-            attr = rad.split('<SEP>')
-            a.put(attr[0], attr[3])
-
-
-def main():
-    a = Hashtabell(1000000)
-    storeArtist(a)
-    print(a.search("TRMMJXK128F93315E9"))
-    print("Antal krockar:", a.krockantal)
-
-
-if __name__ == '__main__':
-    main()
+    def hashfunction(self, key):
+        hashsumman = 0
+        for i, c in enumerate(key):  # för varje karaktär i key
+            hashsumman += (i + len(key)) ** ord(c)  # lägger till index ? längden av key upphöjt till nuvarnde char Node
+            hashsumman = hashsumman % self.size
+        return hashsumman

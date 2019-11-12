@@ -140,7 +140,7 @@ def readVikt(ruta):
             x = float(readVikt(ruta.down)) * float(ruta.num)
 
     else:
-        x = float(hashadeAtomer.search(ruta.atom).value.vikt) * float(ruta.num)
+        x = float(hashadeAtomer.search(ruta.atom).data.vikt) * float(ruta.num)
 
     if ruta.next != None:
         y = readVikt(ruta.next)
