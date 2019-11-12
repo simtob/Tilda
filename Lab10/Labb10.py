@@ -1,185 +1,238 @@
-from linkedQFile import *
 import sys
+#from linkedQfile import *
 import string
-from molgrafik import *
-from hashtest import *
-from hashtest import *
-
-q = LinkedQ()
-
-par = []
-
-ATOMER = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca',
-          'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr',
-          'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba',
-          'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W',
-          'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa', 'U',
-          'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt', 'Ds',
-          'Rg', 'Cn', 'Fl', 'Lv']
+from molgrafik import*
+from hashtest import*
 
 hashadeAtomer = lagraHashtabell(skapaAtomlista())
+
+class Ruta:
+    def __init__(self, atom="( )", num=1):
+        self.atom = atom
+        self.num = num
+        self.next = None
+        self.down = None
+
+class Node:
+    def __init__(self, x, next=None):
+        self.value = x
+        self.next = next
+
+
+class LinkedQ():
+
+    def __init__(self):
+        self._first = None
+        self._last = None  # sign for int
+        self._size = 0
+
+    def isEmpty(self):
+        if self._first == None:
+            return True
+        else:
+            return False
+
+    def enqueue(self, x):
+        new = Node(x)
+        if self.isEmpty():
+            self._first = new
+            self._last = new
+        else:
+            self._last.next = new
+        self._last = new
+        self._size += 1
+
+    def dequeue(self):
+        x = self._first.value
+        self._first = self._first.next
+        self._size -= 1
+        return x
+
+    def size(self):
+        return (self._size)
+
+    def empty(self):
+        self._first = None
+        self._last = None
+
+    def peek(self):
+        if not self.isEmpty():
+            return self._first.value
+        else:
+            return None
+
+
+"""
+<formel>::= <mol> \n
+<mol>   ::= <group> | <group><mol>
+<group> ::= <atom> |<atom><num> | (<mol>) <num>
+<atom>  ::= <LETTER> | <LETTER><letter>
+<LETTER>::= A | B | C | ... | Z
+<letter>::= a | b | c | ... | z
+<num>   ::= 2 | 3 | 4 | ... 
+"""
+q = LinkedQ()
+
+pairing = []
+
+ALLAATOMER = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K',
+              'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb',
+              'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs',
+              'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf',
+              'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th',
+              'Pa', 'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs',
+              'Mt', 'Ds', 'Rg', 'Cn', 'Fl', 'Lv']
 
 
 class Syntaxfel(Exception):
     pass
 
-
-def storeMolekyl(molekyl):
-    """Lägger in strängen i kön"""
-    for symbol in molekyl:
-        q.enqueue(symbol)
+def storemol(themol):  # Lagrar molekyl i en kö
+    for everychar in themol:  # varje karaktär i molykylen läggs in i kön
+        q.enqueue(everychar)
     return q
 
 
-def readMolekyl():
-    """<mol>   ::= <group> | <group><mol>"""
-    """readmol() anropar readgroup() och sedan eventuellt sej själv
-    (men inte om inmatningen är slut eller om den just kommit tillbaka från ett parentesuttryck)"""
-
-    mol = readGrupp()
-    if q.isEmpty():
-        return mol
-    elif q.peek() == ")":
-        if len(par) < 1:
+def readmol():
+    mol = readgroup()  # Läser gruppen
+    if q.peek() == ")":
+        if len(pairing) < 1:
             raise Syntaxfel("Felaktig gruppstart vid radslutet ")
+        else:
+            return mol
+    elif q.peek():
+        if q.peek() == "(" or q.peek().isupper() or q.peek().islower():
+            readmol()
+    elif q.isEmpty():
         return mol
     else:
-        mol.next = readMolekyl()
+        mol.next = readmol()
     return mol
 
 
-def readGrupp():
-    """<group> ::= <atom> |<atom><num> | (<mol>) <num>"""
-    """readgroup() anropar antingen readatom() eller läser en parentes och anropar readmol()"""
-
-    rutan = Ruta()
-
-    if q.isEmpty():
-        raise Syntaxfel("Felaktig gruppstart vid radslutet ")
-    if q.peek().isdigit():
+def readgroup():
+    ruta = Ruta()
+    if q.isEmpty() or q.peek().isdigit():  # Om kön är tom, raise syntaxfel, inte får börja med nummer
         raise Syntaxfel("Felaktig gruppstart vid radslutet ")
 
-    if q.peek().isalpha():
-        rutan.atom = readAtom()
-        if q.peek() is None:
-            return rutan
-        if q.peek().isdigit():
-            rutan.num = int(readNum())
+    if q.peek().isupper() or q.peek().islower():  # kollar om det är bokstav
+        ruta.atom = readatom()  # Läser atomen
+        if q.peek() is None:  # Om peeken är inget
+            return ruta
 
-    elif q.peek() == "(":
-        par.append(q.dequeue())
-        rutan.down = readMolekyl()
+        if q.peek().isdigit():  # Om nästa tecken är nummer
+            ruta.num = int(readnum())  # Anropa funktionen där numret läses
 
-        if q.peek() != ")":
+
+    elif q.peek() == "(":  # Om en grupp börjar med (, ok! Läggs in i kön
+        pairing.append(q.dequeue())  # Läggs in i kön gruppvis
+        ruta.down = readmol()  # Anropar funktion där molykylen läses
+
+        if q.peek() != ")":  # Eftersom en grupp måste ha () blir det fel om det inte slutar på)
             raise Syntaxfel("Saknad högerparentes vid radslutet ")
-
-        if q.isEmpty():
+        if q.isEmpty() or q.peek().isdigit():  # Kan ej börja med tal, blir raise. Och kan ej vara tom
             raise Syntaxfel("Saknad siffra vid radslutet ")
+
         else:
-            par.pop()
-            q.dequeue()
-            if q.isEmpty():
+            pairing.pop()  # Ifall inget funkar tas pairingen bort
+            q.dequeue()  # Bort från kön
+            if q.isEmpty():  # Eller om kön är tom blir det ju fel.
                 raise Syntaxfel("Saknad siffra vid radslutet ")
-            rutan.num = int(readNum())
-    else:
+        ruta.num = int(readnum())  # Numret läses då när grupp inte finns
+    else:  # Annars blir det fel gruppstart
         raise Syntaxfel("Felaktig gruppstart vid radslutet ")
+    return ruta
 
-    return rutan
-
-
-def readAtom():
-    """<atom>  ::= <LETTER> | <LETTER><letter>"""
-
+def readatom():
     if q.peek().isupper():
-        x = q.dequeue()
+        first = q.dequeue()
+
     else:
         raise Syntaxfel("Saknad stor bokstav vid radslutet ")
 
-    if q.peek() != None:
-        if q.peek().islower():
-            x = x + q.dequeue()
+    if q.peek() is not None and q.peek().islower():
+        first = first + q.dequeue()
 
-    if x in ATOMER:
-        return x
-    else:
+    if first not in ALLAATOMER:
         raise Syntaxfel("Okänd atom vid radslutet ")
+    else:
+        return first
 
 
-def readNum():
-    """<num>   ::= 2 | 3 | 4 | ..."""
 
+def readnum():
     if q.peek().isdigit():
         if q.peek() == "0":
             q.dequeue()
             raise Syntaxfel("För litet tal vid radslutet ")
 
-        num = ""
-        while q.peek() != None:
-            if q.peek().isdigit():
-                num = num + q.dequeue()
+        nummer = ""
+        while not q.isEmpty():
+            if q.peek() is None:
+                pass
+            elif q.peek().isdigit():
+                nummer += q.dequeue()
             else:
                 break
-        if int(num) >= 2:
-            return num
-        else:
+        if int(nummer) < 2:
             raise Syntaxfel("För litet tal vid radslutet ")
+        else:
+            return nummer
     else:
         raise Syntaxfel("Saknad siffra vid radslutet ")
 
 
 def printQ():
-    rest = ""
+    items = ""
     while not q.isEmpty():
-        rest = rest + q.dequeue()
-    return rest
+        items = items + q.dequeue()
+    return items
 
-
-def readVikt(ruta):
+def readvikt(ruta):
     if ruta.atom == "()":
         if ruta.down != None:
-            x = float(readVikt(ruta.down)) * float(ruta.num)
-
+            x = float(readvikt(ruta.down)) * float(ruta.num)
     else:
         x = float(hashadeAtomer.search(ruta.atom).data.vikt) * float(ruta.num)
 
     if ruta.next != None:
-        y = readVikt(ruta.next)
+        y = readvikt(ruta.next)
         return x + y
     else:
         return x
 
-
-def readFormel(molekyl):
-    """<formel>::= <mol> \n"""
-    q = storeMolekyl(molekyl)
+def readformel(themol):
+    storemol(themol)
     try:
-        mol = readMolekyl()
-        if len(par) > 0:
+        themol = readmol()
+        if len(pairing) is None:
             raise Syntaxfel('Saknad högerparentes vid radslutet ')
-        print('Formeln är syntaktiskt korrekt')
-        print("Vikten av din molekyl är: " + str(readVikt(mol)))
-        return mol
+        else:
+            print("Formeln är syntaktiskt korrekt")
+            print("Vikten av din molekyl är: " + str(readvikt(themol)))
+            return themol
     except Syntaxfel as error:
         return str(error) + printQ()
 
-
 def main():
-    # kodupprepning på alla raise Syntaxfel
-    molekyl = input("Molekyl: ")
+    #sys.stdin = open(f1) #stdin testar input
+    mol_input = input("Ange molekyl: ")
     mg = Molgrafik()
-    if molekyl == "exit":
+
+    if mol_input == "exit":
         pass
     else:
-        mol = readFormel(molekyl)
+    #for line in sys.stdin:
+     #   mol = line.strip()
+      #  if mol != "#":
+        mol = readformel(mol_input)
         mg.show(mol)
-
-        del par[:]
+        pairing.clear()
         printQ()
-        q.clear()
+        q.empty()
         main()
 
-
 if __name__ == '__main__':
+    f1 = "correct_sample.in"
+    f2 = "incorrect_sample.in"
     main()
-
-
