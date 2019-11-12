@@ -3,7 +3,6 @@ import sys
 import string
 from molgrafik import *
 from hashtest import *
-from hashtest import *
 
 q = LinkedQ()
 
@@ -181,5 +180,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-

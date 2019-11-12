@@ -1,8 +1,8 @@
 class Node:
-   def __init__(self, x, next = None):
-      self.value = x
-      self.next = next
-
+	"""Skapar ett simpelt nod-objekt med ett värde och en next-pekare"""
+	def __init__(self, value):
+		self.value = value
+		self.next = None
 class LinkedQ():
 
     def __init__(self):
