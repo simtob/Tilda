@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10/hashtabell.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10/hashtabell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10/testing1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10/testing1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -472,7 +470,13 @@
       <option name="presentableId" value="LOCAL−00043" />
       <updated>1573209964014</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL−00044" summary="labb9">
+      <created>1573211495533</created>
+      <option name="number" value="LOCAL−00044" />
+      <option name="presentableId" value="LOCAL−00044" />
+      <updated>1573211495533</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
