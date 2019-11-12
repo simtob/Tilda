@@ -12,7 +12,7 @@ class Atom:
 
 
 
-def skapaAtomlista():
+def make_myAtomlist():
     """Returnerar en lista med atomernas namn och vikt"""
     print("\n-------------------------------------------------------")
     print(" * Skapar en lista med alla atomer...")
@@ -131,7 +131,7 @@ Cn 285"
     atomlista = data.split(";")
     return atomlista
 
-def lagraHashtabell(atomlista):
+def store_myHashtable(atomlista):
     """Lagrar atomlistans element i en hashtabell"""
     print("\n-------------------------------------------------------")
     print(" * Lagrar listans atomer i hashtabell...")

@@ -4,7 +4,7 @@ import string
 from molgrafik import*
 from hashtest import*
 
-hashadeAtomer = lagraHashtabell(skapaAtomlista())
+hash_myAtoms = store_myHashtable(make_myAtomlist())
 
 class Ruta:
     def __init__(self, atom="( )", num=1):
@@ -188,19 +188,27 @@ def printQ():
         items = items + q.dequeue()
     return items
 
-def readvikt(ruta):
-    if ruta.atom == "( )":
-        if ruta.down != None:
-            x = float(readvikt(ruta.down)) #float(ruta.num)
-    else:
-        x = float(hashadeAtomer.search(ruta.atom).value.vikt)# * float(ruta.num)
-        #print(ruta.num)
+#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
-    if ruta.next != None:
-        y = readvikt(ruta.next)
-        return x + y
+
+def get_weigth(ruta):
+
+    if ruta.atom == "( )":
+        if ruta.down is not None:
+            item1 = float(get_weigth(ruta.down)) * float(ruta.num) #hämtar vikten från ner pekare gångrar med numret
+            #Kollar om vi har ett parentespar, kollar om down inte är none
+            #dvs har en atom, tar då atomen * antalet av den atomen (num)
     else:
-        return x
+        item1 = float(hash_myAtoms.search(ruta.atom).value.vikt) * float(ruta.num)
+        #Om den inte är tom kollar efter en atom som finns
+
+    if ruta.next is None:
+        return item1 #om nästa ruta är tom, returnera vikt på vår atom
+    else:
+        item2 = get_weigth(ruta.next) #annars ta vikten på nästa och addera med första
+        return item1 + item2
+
 
 def readformel(themol):
     storemol(themol)
@@ -209,8 +217,8 @@ def readformel(themol):
         if len(pairing) is None:
             raise Syntaxfel('Saknad högerparentes vid radslutet ')
         else:
-            print("Formeln är syntaktiskt korrekt")
-            print("Vikten av din molekyl är: " + str(readvikt(themol)))
+            print("Vikten av din molekyl är: " + str(get_weigth(themol)))
+            print("Ritar atomen....")
             return themol
     except Syntaxfel as error:
         return str(error) + printQ()

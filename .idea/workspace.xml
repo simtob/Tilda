@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03ac86e7-77a4-47df-8195-d24fe17852e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Tilda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tilda.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10.2/Labb10.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10.2/Labb10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10.2/hashtabell.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10.2/hashtabell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10.2/hashtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10.2/hashtest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10.2/testing1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10.2/tgrafisk.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10.2/tgrafisk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab10/Labb10.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10/Labb10.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab10/hashtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab10/hashtest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab10/testing1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab10/tgrafisk.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -516,7 +509,13 @@
       <option name="presentableId" value="LOCAL−00048" />
       <updated>1573560607968</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL−00049" summary="labb9">
+      <created>1573564384975</created>
+      <option name="number" value="LOCAL−00049" />
+      <option name="presentableId" value="LOCAL−00049" />
+      <updated>1573564384975</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -576,11 +575,6 @@
           <url>file://$PROJECT_DIR$/Lab10/Labb10.py</url>
           <line>108</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Lab10/Labb10.py</url>
-          <line>195</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
