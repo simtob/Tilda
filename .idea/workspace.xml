@@ -68,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testing1">
+  <component name="RunManager" selected="Python.Labb10">
     <configuration name="Lab4" type="PythonConfigurationType" factoryName="Python">
       <module name="Tilda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testing1" />
         <item itemvalue="Python.Labb10" />
+        <item itemvalue="Python.testing1" />
         <item itemvalue="Python tests.Unittests for Labb9Test.Test.test1" />
         <item itemvalue="Python tests.Unittests in Labb9Test.py" />
         <item itemvalue="Python tests.Unittests for Lab9.Labb9Test.Test.test1" />
